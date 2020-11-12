@@ -1,0 +1,37 @@
+
+%
+%   HYOUSI.STY ---- 論文用 style file
+%
+%   28 May, 1990 by  Takeshi Sakaguchi
+%
+
+\def\teacher#1{\gdef\@teacher{#1}}
+\def\affliation#1{\gdef\@affliation{#1}}
+\def\maketitle{\begin{titlepage}
+\let\footnotesize\small \let\footnoterule\relax \setcounter{page}{0}
+\null
+\vfil
+\vskip 60pt
+
+\begin{center}
+  {\huge \@title \par}
+  \vskip 18zh
+{\large \@date \par}
+  \vfil\vfil
+  {\Large \begin{tabular}[t]{c}{\Large \@author} 
+  \end{tabular}\par}
+\end{center} \par
+
+%\@thanks
+\vfil
+\null
+\end{titlepage}
+\setcounter{footnote}{0} \let\thanks\relax
+\gdef\@thanks{}\gdef\@author{}\gdef\@title{}\gdef\@teacher{}\let\maketitle\relax} 
+
+\def\abstract{\titlepage
+\null\vfil
+\begin{center}
+{\bf Abstract}
+\end{center}}
+\def\endabstract{\par\vfil\null\endtitlepage}
