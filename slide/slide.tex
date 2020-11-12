@@ -1,0 +1,367 @@
+\documentclass[12pt,dvipdfmx,svgnames,uplatex,aspectratio=169]{beamer}
+% \documentclass[12pt,dvipdfmx,svgnames,uplatex,aspectratio=169,draft]{beamer}  % 画像を省略してコンパイルを高速化する
+%
+% ===========================================
+% 図・表関係
+% ===========================================
+\usepackage{graphicx}  % documentclassのオプションに draft を追加 -> ダミー図となりコンパイルが早くなる
+\graphicspath{../thesis/pics/}  % \includegraphicsで参照するディレクトリ
+\usepackage{graphbox}
+\usepackage[font=small,labelfont=bf]{caption}
+%
+% ===========================================
+% 参考文献
+% ===========================================
+\usepackage[url=false,isbn=false,doi=false]{biblatex}
+\addbibresource{../bib_textbooks.bib}  % 教科書など
+\addbibresource{../bib_articles.bib}  % 論文など
+%
+% ===========================================
+% 独自スタイルの導入
+% ===========================================
+\usepackage{./mystyle_slide}
+\usepackage{pifont}% http://ctan.org/pkg/pifont
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+\usepackage{cancel}
+%
+% ===========================================
+% 表紙の記述
+% ===========================================
+\title{
+  論文のタイトル論文のタイトル
+}
+\subtitle{
+  20〇〇年度~大阪大学大学院基礎工学研究科\\
+  機能創成専攻~修士論文公開講演会
+}
+\author{阪大~太郎}
+\institute{〇〇研究室}
+\date{20〇〇年2月〇〇日}
+
+% +++++++++++++++++++++++++++++++++++++++++++
+% 本文
+% +++++++++++++++++++++++++++++++++++++++++++
+
+\begin{document}
+\thispagestyle{empty}
+\maketitle
+
+% ===========================================
+% 目次
+% ===========================================
+\begin{frame}[noframenumbering]{目次}
+  \thispagestyle{empty}
+  % \tableofcontents[hideallsubsections]  % 一列，節のみ
+  \tableofcontents  % 一列，小節まで
+  % 二列，小節まで
+  % \begin{columns}[t]
+  %   \begin{column}{.5\textwidth}
+  %     \tableofcontents[sections={1-3}]
+  %   \end{column}
+  %   \begin{column}{.5\textwidth}
+  %     \tableofcontents[sections={4-7}]
+  %   \end{column}
+  % \end{columns}
+\end{frame}
+
+
+\addtocounter{framenumber}{-1}  % 次のスライドからページカウントを開始する
+% ===========================================
+% 研究背景
+% ===========================================
+\section{研究背景}
+\subsection{乱流現象}
+\begin{frame}{\insertsection：\insertsubsection}
+  \begin{columns}[c]
+    \begin{column}{0.4\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{example-image-1x1}
+    \end{column}
+    \begin{column}{0.6\textwidth}
+      \begin{block}{乱流}
+        \begin{itemize}
+          \item 流体が時空間的に乱れたふるまいを示す
+          \item 決定論的な支配方程式に従うが，\\
+            その非線形性から解析が困難
+        \end{itemize}
+      \end{block}
+      \pause
+      \begin{block}{エネルギカスケード機構}
+        \begin{enumerate}
+          \item 大スケールへのエネルギ注入
+          \item 大 \(\to\) 小スケールへのエネルギ伝達
+          \item 小スケールからのエネルギ散逸
+        \end{enumerate}
+      \end{block}
+    \end{column}
+  \end{columns}
+  \vspace{\baselineskip}
+  \pause
+  \hfill
+  \begin{beamercolorbox}[rounded=true, wd=0.8\textwidth]{stress}
+    \centering
+    「乱流の動力学」はきわめて重要な問題だが，\\その完全な性質は明らかになっていない
+  \end{beamercolorbox}
+  \hfill\hfill
+\end{frame}
+
+
+\subsection{乱流の普遍則}
+\begin{frame}{\insertsection：\insertsubsection}
+  \begin{columns}[c]
+    \begin{column}{0.6\textwidth}
+      \begin{block}{相似則}
+        小スケールの統計は平均エネルギ散逸率\(\overline{\epsilon}\)と波数スケール\(k\)で決まる：
+        \begin{equation*}
+          E(k) = C \overline{\epsilon}^{2/3} k^{-5/3}
+        \end{equation*}
+      \end{block}
+      \uncover<2>{
+      \begin{block}{散逸則}
+        \(\overline{\epsilon}(t)\)を大スケールの特徴速度\(U(t)\)と特徴長さ\(L(t)\)で評価できる：
+        \begin{equation*}
+          \overline{\epsilon}(t) = \overline{\varPi_L}(t) ~\propto ~\frac{U(t)^3}{L(t)}
+        \end{equation*}
+      \end{block}
+      }
+    \end{column}
+    \begin{column}{0.4\textwidth}
+      \centering
+      \only<1>{
+      \includegraphics[width=\textwidth]{example-image-a}
+      }
+      \only<2>{
+      \includegraphics[width=\textwidth]{example-image-b}
+      }
+    \end{column}
+  \end{columns}
+\end{frame}
+
+
+% ===========================================
+% 研究目標
+% ===========================================
+\section{研究目標}
+\begin{frame}{\insertsection}
+  \hfill
+  \begin{beamercolorbox}[rounded=true, wd=0.8\textwidth]{stress}
+    \centering
+    研究目標研究目標研究目標研究目標研究目標研究目標
+  \end{beamercolorbox}
+  \hfill\hfill
+  % \vspace{\baselineskip}
+  \pause
+  \begin{columns}[T]
+    \begin{column}{0.4\textwidth}
+      \vspace{\baselineskip}
+      \centering
+      \includegraphics[width=\textwidth]{example-image-1x1}
+    \end{column}
+    \begin{column}{0.6\textwidth}
+      \begin{block}{対象とする系}
+        \begin{itemize}
+          \item 対象とする系の説明
+          \item 対象とする系の説明
+          \item 対象とする系の説明
+          \item 対象とする系の説明
+          \item 対象とする系の説明
+          \item 対象とする系の説明
+          \item 対象とする系の説明
+        \end{itemize}
+      \end{block}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+
+\section{解析手法}
+\subsection{室内実験}
+\begin{frame}{\insertsection：\insertsubsection}
+  \begin{columns}[c]
+    \begin{column}{0.3\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{example-image-9x16}
+    \end{column}
+    \begin{column}{0.7\textwidth}
+      \begin{block}{実験装置}
+        \begin{table}
+          \begin{tabular}{l|l}
+            系の直径  & \(D=100\, \si{mm}\) \\
+            系の高さ  & \(H=300\, \si{mm}\) \\
+            系の周期  & \(T=0.1 \sim 10\, \si{s}\)
+          \end{tabular}
+        \end{table}
+      \end{block}
+      \pause
+      \begin{block}{実験条件}
+        \vspace{-\baselineskip}
+        \begin{table}
+          \begin{tabular}{l|cc}
+            & 条件A & 条件B \\ \hline
+            \makebox[5zw][l]{測定領域} \(A\) & \((D/2)^2\) & \((D/2)^2\) \\
+            空間解像度 \(\Delta x\) & \(0.01D\) & \(0.02D\) \\
+            時間解像度 \(\Delta t\) & \(1.0\times10^{-2}T\) & \(5.0\times10^{-3}T\) \\
+            \makebox[5zw][l]{測定時間} \(T_\mathrm{max}\) & \(10T\) & \(500T\)
+          \end{tabular}
+        \end{table}
+      \end{block}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+
+% ===========================================
+% 結果1
+% ===========================================
+\section{結果1}
+\subsection{大スケール構造と秩序構造}
+\begin{frame}{\insertsection：\insertsubsection}
+  \begin{columns}[T]
+    \begin{column}{0.33\textwidth}
+      \begin{block}{流速場}
+        \centering
+        \includegraphics[width=\textwidth]{example-image-1x1}
+        \begin{equation*}
+          \vb*{u}(\vb*{x}, t)
+        \end{equation*}
+      \end{block}
+    \end{column}
+    \begin{column}{0.33\textwidth}
+      \begin{block}{自乗ストレイン場}
+        \centering
+        \includegraphics[width=\textwidth]{example-image-1x1}
+        \begin{equation*}
+          S(\vb*{x}, t)
+        \end{equation*}
+      \end{block}
+    \end{column}
+    \begin{column}{0.33\textwidth}
+      \begin{block}{エンストロフィ場}
+        \centering
+        \includegraphics[width=\textwidth]{example-image-1x1}
+        \begin{equation*}
+          \varOmega(\vb*{x}, t)
+        \end{equation*}
+      \end{block}
+    \end{column}
+  \end{columns}
+  \begin{itemize}
+    \item 大スケール構造の逆相関\(\to\)\colorbox{pink}{秩序的な構造}
+  \end{itemize}
+\end{frame}
+
+
+% ===========================================
+% 結果2
+% ===========================================
+\section{結果2}
+\subsection{エネルギの自己相関}
+\begin{frame}{\insertsection：\insertsubsection}
+  \centering
+  \includegraphics[width=0.7\textwidth]{example-image-16x9}
+  \begin{itemize}
+    \item 自己相関を \(C_0\exp[-\tau/\tau_0]\) でフィッティング
+    \item 普遍的な時定数 \(\tau_0=12\) \(\to\) 三桁の \(\Re\) で\colorbox{pink}{\(\order{10T}\) の大スケール運動}
+  \end{itemize}
+\end{frame}
+
+
+% ===========================================
+% 結言
+% ===========================================
+\section{結言}
+\begin{frame}{\insertsection}
+  \hfill
+  \begin{beamercolorbox}[rounded=true, wd=0.8\textwidth]{stress}
+    \centering
+    閉じた系の乱流の時間変動と空間構造を解析
+  \end{beamercolorbox}
+  \hfill\hfill
+  \vspace{\baselineskip}
+  \begin{columns}[T]
+    \begin{column}{0.3\textwidth}
+      \centering
+      \includegraphics[height=0.5\textheight]{example-image-9x16}
+    \end{column}
+    \begin{column}{0.7\textwidth}
+      \begin{block}{空間間欠性}
+        \vspace{-0.5\baselineskip}
+        \begin{itemize}
+          \item[\cmark] 小スケール構造のクラスタ（PIV）
+          \item[\cmark] 逆相関する大スケール構造（PIV）
+        \end{itemize}
+      \end{block}
+      \begin{block}{時間非定常性}
+        \vspace{-0.5\baselineskip}
+        \begin{itemize}
+          \item[\cmark] \(\order{10T}\) の長時間相関（PIV）
+        \end{itemize}
+      \end{block}
+      \begin{block}{非平衡なカスケード}
+        \vspace{-0.5\baselineskip}
+        \begin{itemize}
+          \item[\cmark] 主流と二次流の間の時間遅れ（DNS）
+        \end{itemize}
+      \end{block}
+    \end{column}
+  \end{columns}
+  \pause
+  \hfill
+  \begin{beamercolorbox}[rounded=true, wd=0.8\textwidth]{stress}
+    \centering
+    局所平衡仮説の破れを示唆する結果\\
+    \(\to\) 動力学に基づいた新理論の基礎
+  \end{beamercolorbox}
+  \hfill\hfill
+\end{frame}
+
+
+
+% ===========================================
+% 補足スライド
+% ===========================================
+\backupbegin
+\appendix
+
+\begin{frame}
+  \centering
+  \begin{beamercolorbox}[wd=\textwidth, center, sep=2pt, rounded=true, shadow=false]{frametitle}
+    補足スライド
+  \end{beamercolorbox}
+\end{frame}
+
+
+\section{補足スライド}
+\subsection{補足トピック1}
+\begin{frame}{\insertsection：\insertsubsection}
+  \begin{columns}[T]
+    \begin{column}{0.33\textwidth}
+      \begin{block}{\(f(\vb*{x},t)\)}
+        \centering
+        \includegraphics[width=\textwidth]{example-image-1x1}
+      \end{block}
+    \end{column}
+    \begin{column}{0.33\textwidth}
+      \begin{block}{\(g(\vb*{x},t)\)}
+        \centering
+        \includegraphics[width=\textwidth]{example-image-1x1}
+      \end{block}
+    \end{column}
+    \begin{column}{0.33\textwidth}
+      \begin{block}{\(h(\vb*{x},t)\)}
+        \centering
+        \includegraphics[width=\textwidth]{example-image-1x1}
+      \end{block}
+    \end{column}
+  \end{columns}
+
+  \begin{itemize}
+    \item 補足情報1
+    \item 補足情報2
+  \end{itemize}
+\end{frame}
+
+\backupend
+
+\end{document}
