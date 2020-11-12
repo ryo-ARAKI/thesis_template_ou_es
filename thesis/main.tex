@@ -1,0 +1,145 @@
+\documentclass[12pt,dvipdfmx,svgnames,a4paper,uplatex]{ujreport}
+% \documentclass[12pt,dvipdfmx,svgnames,a4paper,uplatex, draft]{ujreport}  % 画像を省略してコンパイルを高速化する
+% +++++++++++++++++++++++++++++++++++++++++++
+% パッケージの導入
+% +++++++++++++++++++++++++++++++++++++++++++
+%
+% ===========================================
+% 原稿設定
+% ===========================================
+% 表紙用スタイルファイル
+% \usepackage{hyoshi_bachelor}  % 卒論用
+\usepackage{hyoshi_master}    % 修論用
+% 原稿のサイズ
+\usepackage[top=25truemm,bottom=25truemm,left=25truemm,right=25truemm]{geometry}
+% \usepackage{relsize}
+%
+% ===========================================
+% 図・表関係
+% ===========================================
+\usepackage{graphicx}
+\graphicspath{{./pics/}}  % \includegraphicsで参照するディレクトリ
+%ここに {/path/to/figure/directory/} などを追加すれば他のディレクトリの画像を参照できる．
+%
+% ===========================================
+% 参考文献
+% ===========================================
+\usepackage[
+  backend=biber,  % 文献ソートを担当（登場順なので不要？）
+  style=phys,  % AIPとAPSのスタイル
+  biblabel=brackets,  % 文献番号を [1] のように表記
+  pageranges=false]{biblatex}  % 文献のページ範囲を省略
+\addbibresource{../bib_textbooks.bib}  % 教科書など
+\addbibresource{../bib_articles.bib}  % 論文など（※Mendeleyで自動生成）
+% \addbibresource{/path/to/hogehoge.bib}  % 他にも追加可能
+%
+% ===========================================
+% chapterごとの改ページを抑制
+% ===========================================
+\makeatletter
+\renewcommand{\chapter}{%
+  \if@openright\cleardoublepage\fi
+  \thispagestyle{jpl@in}%
+  \global\@topnum\z@
+  \@afterindenttrue
+  \secdef\@chapter\@schapter}
+\makeatother
+%
+% ===========================================
+% 独自スタイルの定義
+% ===========================================
+\usepackage{../mystyle}
+\usepackage[english]{babel}  % arabic数字でページ番号を指定
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\usepackage{lipsum}  % ダミー文章
+\usepackage{bxjalipsum}  % 日本語のダミー文章
+%
+% ===========================================
+% 表紙の記述
+% ===========================================
+\title{
+  論文タイトル
+}
+\date{20〇〇年2月}
+\author{阪大~太郎}
+
+% +++++++++++++++++++++++++++++++++++++++++++
+% 本文
+% +++++++++++++++++++++++++++++++++++++++++++
+\begin{document}
+\maketitle
+
+% ===========================================
+% 概要（英語） *****修士論文のみ（卒論は緒言）*****
+% ===========================================
+\pagenumbering{roman}
+\input{./text/abstract.tex}
+\clearpage
+
+% ===========================================
+% 目次
+% ===========================================
+\renewcommand{\contentsname}{目次}
+\tableofcontents
+\clearpage
+
+% ===========================================
+% 記号表
+% ===========================================
+\input{./text/chap0_words_definition.tex}
+\clearpage
+
+% ===========================================
+% 以降は日本語環境
+% ===========================================
+\renewcommand{\figurename}{図}
+\renewcommand{\tablename}{表}
+\renewcommand{\prechaptername}{第}
+\renewcommand{\postchaptername}{章}
+
+% ===========================================
+% 緒言 *****卒業論文のみ？（修論は英語概要）*****
+% ===========================================
+\pagenumbering{arabic}  % 以降算用数字でページ番号を記述
+% \input{./text/chap1_introduction.tex}
+
+% ===========================================
+% 研究背景
+% ===========================================
+\input{./text/chap2_background.tex}
+
+% ===========================================
+% 室内実験
+% ===========================================
+\input{./text/chap3_experiment.tex}
+
+% ===========================================
+% 数値計算
+% ===========================================
+\input{./text/chap4_calculation.tex}
+
+% ===========================================
+% 結言
+% ===========================================
+\input{./text/chap5_conclusion.tex}
+\clearpage
+
+% ===========================================
+% 謝辞
+% ===========================================
+\input{./text/chap6_acknowledgement.tex}
+\clearpage
+
+% ===========================================
+% 参考文献
+% ===========================================
+\addcontentsline{toc}{chapter}{参考文献}
+\printbibliography[title=参考文献]
+\clearpage
+
+% ===========================================
+% 補遺
+% ===========================================
+\input{./text/chap7_appendix}
+
+\end{document}

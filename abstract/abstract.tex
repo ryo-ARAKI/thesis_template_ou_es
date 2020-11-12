@@ -1,0 +1,177 @@
+\documentclass[11pt,dvipdfmx,svgnames,a4paper,uplatex]{ujarticle}
+% +++++++++++++++++++++++++++++++++++++++++++
+% パッケージの導入
+% +++++++++++++++++++++++++++++++++++++++++++
+%
+% ===========================================
+% 原稿設定
+% ===========================================
+% 原稿のサイズ
+\usepackage[top=25truemm,bottom=25truemm,left=25truemm,right=25truemm]{geometry}
+\setlength\intextsep{0pt}
+\setlength\textfloatsep{0pt}
+\usepackage{relsize}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage[compact]{titlesec}
+\titleformat{\section}{\normalfont\bfseries}{\thesection}{1em}{}  % \sectionのフォントサイズを本文と統一
+\titlespacing*{\section}{0pt}{*0}{0pt}  % section前後のスペーシングをなくす
+\pagestyle{empty}
+% 一行あたり文字数と一ページあたり行数の指定
+\makeatletter
+\def\mojiparline#1{
+    \newcounter{mpl}
+    \setcounter{mpl}{#1}
+    \@tempdima=\linewidth
+    \advance\@tempdima by-\value{mpl}zw
+    \addtocounter{mpl}{-1}
+    \divide\@tempdima by \value{mpl}
+    \advance\kanjiskip by\@tempdima
+    \advance\parindent by\@tempdima
+}
+\makeatother
+\def\linesparpage#1{
+    \baselineskip=\textheight
+    \divide\baselineskip by #1
+}
+%
+% ===========================================
+% 図・表関係
+% ===========================================
+% \usepackage[draft]{graphicx}
+\usepackage{graphicx}
+\usepackage{wrapfig}  % 文章に囲まれた図の挿入
+\graphicspath{{./pics/}}  % \includegraphicsで参照するディレクトリ
+\usepackage{setspace,caption}
+\captionsetup[figure]{font={stretch=0.8}}  % 図のキャプションのスペーシングを縮める
+%
+% ===========================================
+% 参考文献
+% ===========================================
+\usepackage[backend=biber,style=phys,biblabel=brackets,pageranges=false,maxbibnames=3,doi=false]{biblatex}
+\setlength\bibitemsep{0.0\baselineskip}
+\addbibresource{../bib_textbooks.bib}  % 教科書など
+\addbibresource{../bib_articles.bib}  % 論文など
+\AtEveryBibitem{\clearlist{language}}  % 文献の言語情報を出力しない
+%
+% ===========================================
+% 独自スタイルの導入
+% ===========================================
+\usepackage{../mystyle}
+\renewcommand{\figurename}{Fig.}
+\usepackage{bxjalipsum}
+\DeclareSourcemap{
+  % 論文のタイトルを非表示（mystyle.styで論文のタイトル表示からダブルクォーテーションを削除，という指示をしているのでここに書く）
+  \maps[datatype=bibtex]{
+    \map{
+      \pertype{article}
+      \step[fieldset=title, null]
+    }
+  }
+}
+%
+% ===========================================
+% 表紙の記述
+% ===========================================
+\title{\underline{title}}
+\author{name}
+\date{\today}
+
+% +++++++++++++++++++++++++++++++++++++++++++
+% 本文
+% +++++++++++++++++++++++++++++++++++++++++++
+
+\begin{document}
+\mojiparline{42}  % 一行あたり文字数
+\linesparpage{38}  % 一ページあたり行数
+
+\centerline{\textbf{
+  修士論文のタイトル修士論文のタイトル修士論文のタイトル修士論文のタイトル
+}}
+\rightline{阪大~太郎}
+
+% ===========================================
+\section{緒言}
+% ===========================================
+
+\begin{wrapfigure}{r}{12zw}
+  \vspace*{-\intextsep}
+  \centering
+  \includegraphics[width=10zw]{example-image-9x16}
+  \caption{
+    Figure caption figure caption figure caption.
+  }
+  \label{fig:intruduction}
+  \vspace*{-\intextsep}
+\end{wrapfigure}
+
+\textcolor{LightGray}{
+\jalipsum[1-2]{wagahai}
+}
+
+
+% ===========================================
+\section{実験手法}  % 自身の研究に合わせて変更
+% ===========================================
+
+\begin{wrapfigure}{r}{26zw}
+  \vspace*{-\intextsep}
+  \centering
+  \includegraphics[width=24zw]{example-image-16x9}
+  \caption{
+    Figure caption figure caption figure caption figure caption figure caption figure caption figure caption.
+  }
+  \label{fig:intruduction}
+  \vspace*{-\intextsep}
+\end{wrapfigure}
+
+\textcolor{LightGray}{
+\jalipsum[3]{wagahai}
+\jalipsum[4]{wagahai}
+}
+
+
+% ===========================================
+\section{実験結果}  % 自身の研究に合わせて変更
+% ===========================================
+
+\begin{figure}[htb]
+  \centering
+  \subfloat[\(f (\vb*{x},t)\)]{
+    \includegraphics[width=0.24\textwidth]{example-image-1x1}
+    \label{subfig:f}
+  }
+  \subfloat[\(g (\vb*{x},t)\)]{
+    \includegraphics[width=0.24\textwidth]{example-image-1x1}
+    \label{subfig:g}
+  }
+  \subfloat[\(h (\vb*{x},t)\)]{
+    \includegraphics[width=0.24\textwidth]{example-image-1x1}
+    \label{subfig:h}
+  }
+  \subfloat[\(i (\vb*{x},t)\)]{
+    \includegraphics[width=0.24\textwidth]{example-image-1x1}
+    \label{subfig:i}
+  }
+  \caption{
+    Figure caption figure caption figure caption figure caption figure caption figure caption figure caption figure caption figure caption figure caption.
+  }
+  \label{fig:fig_result}
+\end{figure}
+
+\textcolor{LightGray}{
+\jalipsum[5]{wagahai}
+}
+
+
+% ===========================================
+\section{結言}
+% ===========================================
+
+私は，〇〇〇という問題に注目し~\cite{Goto2017a,GotoJPS2018}，〜〜〜を明らかにした~\cite{Araki_master_thesis}．
+
+% ===========================================
+\printbibliography[title=参考文献]
+% ===========================================
+
+\end{document}

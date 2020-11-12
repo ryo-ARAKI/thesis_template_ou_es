@@ -1,0 +1,62 @@
+﻿
+%
+%   HYOUSI.STY ---- 論文用 style file
+%
+%   28 May, 1990 by  Takeshi Sakaguchi
+%
+
+\def\teacher#1{\gdef\@teacher{#1}}
+\def\affliation#1{\gdef\@affliation{#1}}
+\def\maketitle{\begin{titlepage}
+\let\footnotesize\small \let\footnoterule\relax \setcounter{page}{0}
+\null
+\vfil
+\vskip 60pt
+
+\begin{center}
+  {\huge \underline{特別研究} \par}
+  \vspace{1cm}
+  {\huge \underline{\@title} \par}
+  \vskip 10.8zh
+{\large \@date\ 提出 \par}
+  \vfil\vfil
+  \vskip 5.8zh
+\begin{minipage}{70mm}
+\begin{center}
+  % 指導教員が複数の場合====================
+  \[ \left.
+  \begin{array}{ll}
+  \mbox{{\large 後藤\ 晋}} \mbox{{\large 教授}} \\
+  \mbox{{\large 大槻\ 道夫}} \mbox{{\large 准教授}} \\
+  \mbox{{\large 犬伏\ 正信}} \mbox{{\large 助教}} \\
+  \mbox{{\large 渡邉\ 陽介}} \mbox{{\large 助教}} \\
+  \end{array} \right\} \mbox{{\large 指導}}
+  \]
+  % 指導教員が一人の場合====================
+  % \mbox{{\large 後藤\ 晋}} \mbox{{\large 教授}} \mbox{{\large 指導}}
+\end{center}
+\end{minipage}
+\par
+  \vskip 5.3zh
+  \begin{tabular}[t]{c}
+    {\Large 大阪大学基礎工学部}\\
+    {\Large システム科学科4年}\\
+  \end{tabular} \par
+  \vskip 2.3zh
+  {\Large \begin{tabular}[t]{c}{\Large \@author}
+  \end{tabular}\par}
+\end{center} \par
+
+%\@thanks
+\vfil
+\null
+\end{titlepage}
+\setcounter{footnote}{0} \let\thanks\relax
+\gdef\@thanks{}\gdef\@author{}\gdef\@title{}\gdef\@teacher{}\let\maketitle\relax}
+
+\def\abstract{\titlepage
+\null\vfil
+\begin{center}
+{\bf Abstract}
+\end{center}}
+\def\endabstract{\par\vfil\null\endtitlepage}
