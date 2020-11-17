@@ -67,3 +67,9 @@
 - 章ごとに分割したtexファイル用ディレクトリ
 - 修論では `abstract.tex` （英語1ページの概要）が必要で `chap1_introduction.tex` （コンパクトな緒言）は不要
   - 卒論はその逆で，英語の概要無しでコンパクトな緒言をつける
+
+### `thesis/sample/`
+
+- 上に述べた卒論/修論のスタイルでコンパイルしたPDF
+  - `main_batchelor.pdf` 卒業論文（特別研究）
+  - `main_master.pdf` 修士論文
