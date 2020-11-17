@@ -1,4 +1,4 @@
-# thesis_templete_ou_es
+# thesis_template_ou_es
 
 - 大阪大学基礎工学部システム科学科機械科学コース 卒業論文
 - 大阪大学大学院基礎工学研究科機能創成専攻非線形力学領域 修士論文
