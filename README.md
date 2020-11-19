@@ -5,7 +5,57 @@
 
 用 LaTeX テンプレート
 
-## `abstract/`
+----
+
+## 使い方
+
+### リポジトリを複製
+
+以下に `kisokou` というGitHubユーザーが `master_thesis` という名前でこのリポジトリを複製する手順を示します．
+
+```bash
+# 1. GitHubで master_thesis という新しいリポジトリを作成する
+
+# 2. このリポジトリをその名前でcloneする
+git clone git@github.com:ryo-ARAKI/thesis_template_ou_es.git master_thesis  # SSHを利用
+cd master_thesis
+
+# 3. 自身のリモートリポジトリを登録する
+git remote set-url origin git@github.com:kisokou/master_thesis.git
+
+# 4. 自身のリモートリポジトリを更新する
+git push origin HEAD
+```
+
+### 最初のコンパイル
+
+`thesis/` ディレクトリにある `main.tex` をコンパイルすることで修士論文の形式にあったPDFが生成されます．
+このテンプレートは `uplatex` で作成されているので，それに応じた設定でコンパイルしてください．
+`latexmk` コマンドを使用する方は，私の使っている `.latexmkrc` ファイルが [ここ](https://gist.github.com/ryo-ARAKI/8a256ef600325b0344bbc3990818b691) にあるので使ってください．
+
+### テンプレートへの修正の反映
+
+このテンプレートが更新されているとき，以下のように修正点を自身のリポジトリに反映させてください．
+
+```bash
+# 1. このテンプレートのリポジトリを登録する
+git remote add upstream git@github.com:ryo-ARAKI/thesis_template_ou_es.git
+
+# 2. テンプレートの最新状態を取得する
+git fetch upstream
+
+# 3. 自分がmasterブランチにいることを確認し，テンプレートの最新状態をmergeする
+git switch master && git merge upstream/master
+
+# 4. 自身のリモートリポジトリを更新する
+git push origin HEAD
+```
+
+----
+
+## ファイル説明
+
+### `abstract/`
 
 - 修論概要用のファイル
 - モノクロ書式である，本文より図のサイズが小さくなりがちであることに注意し，
@@ -13,11 +63,11 @@
   - ラベルや凡例のフォントサイズを大きくする
     などに注意して図を作成する
 
-## `slide/`
+### `slide/`
 
 - 口頭発表スライド用のファイル(Beamer)
 
-## `thesis/`
+### `thesis/`
 
 - 卒論・修論用のファイル
 - `main.tex` をコンパイルすることで， `thesis/text/` 以下の章ごとに分割した tex ファイルが読み込まれる
@@ -57,24 +107,19 @@
 \input{./text/chap1_introduction.tex}
 ```
 
-### `thesis/pics/`
+#### `thesis/pics/`
 
 - 画像用ディレクトリ
 - このディレクトリにおいた画像を `abstract/` や `slide/` 以下からも参照可能
 
-### `thesis/text/`
+#### `thesis/text/`
 
 - 章ごとに分割した tex ファイル用ディレクトリ
 - 修論では `abstract.tex` （英語 1 ページの概要）が必要で `chap1_introduction.tex` （コンパクトな緒言）は不要
   - 卒論はその逆で，英語の概要無しでコンパクトな緒言をつける
 
-### `thesis/sample/`
+#### `thesis/sample/`
 
 - 上に述べた卒論/修論のスタイルでコンパイルした PDF
   - `main_batchelor.pdf` 卒業論文（特別研究）
   - `main_master.pdf` 修士論文
-
-## コンパイルについて
-
-私の使っている `.latexmkrc` ファイルは [ここ](https://gist.github.com/ryo-ARAKI/8a256ef600325b0344bbc3990818b691) にあります．
-必要なら自由に使ってください．
