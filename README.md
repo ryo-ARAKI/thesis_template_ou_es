@@ -123,3 +123,43 @@ git push origin HEAD
 - 上に述べた卒論/修論のスタイルでコンパイルした PDF
   - `main_batchelor.pdf` 卒業論文（特別研究）
   - `main_master.pdf` 修士論文
+
+----
+
+## 参考文献の管理について
+
+このテンプレートでは `biblatex` を利用して参考文献を管理しています．
+また，その形式はPhysical Review Fluidsに準じています．
+
+### `bib_articles.bib` ：Mendeleyによる文献情報の管理
+
+`bib_articles.bib` はMendeleyで自動作成した `.bib` ファイルの例です．
+これをLaTeXファイルのプリアンプルで
+
+```latex
+\addbibresource{../bib_articles.bib}
+```
+
+のように読み込むことで文献を引用することができます．
+手で文献情報を管理するよりも圧倒的に楽なので，ぜひこのようにして参考文献を管理してください．
+
+### `bib_textbooks.bib` ：手作業による文献情報の管理
+
+`bib_textbooks.bib` は，書籍や先輩の修士論文などMendeleyで管理しづらい参考文献をまとめたファイルです．
+出版社のウェブサイトやGoogle Booksを使うと書籍の参考文献情報を `.bib` ファイルで出力できるので，それらをこのファイルにまとめておくと便利です．
+
+### `mystyle.sty` ：雑誌名の短縮形の管理
+
+このテンプレートでは参考文献の雑誌名を短縮形で表示します．
+正式名称と短縮形の変換は `mystyle.sty` に記述されています．
+たとえば，
+
+```latex
+\step[
+  fieldsource=journal,
+  match={Annual Review of Fluid Mechanics},
+  replace={Annu. Rev. Fluid Mech.}]%
+```
+
+は `Annual Review of Fluid Mechanics` という雑誌を `Annu. Rev. Fluid Mech.` という短縮形で表示するように定義しています．
+現状の `mystyle.sty` では流体力学に関係する雑誌名をある程度網羅しているつもりですが，他に引用する雑誌がある場合は自身で `\step[]` 要素を増やして対応してください．
