@@ -73,3 +73,8 @@
 - 上に述べた卒論/修論のスタイルでコンパイルした PDF
   - `main_batchelor.pdf` 卒業論文（特別研究）
   - `main_master.pdf` 修士論文
+
+## コンパイルについて
+
+私の使っている `.latexmkrc` ファイルは [ここ](https://gist.github.com/ryo-ARAKI/8a256ef600325b0344bbc3990818b691) にあります．
+必要なら自由に使ってください．
