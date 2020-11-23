@@ -167,3 +167,29 @@ git push origin HEAD
 
 は `Annual Review of Fluid Mechanics` という雑誌を `Annu. Rev. Fluid Mech.` という短縮形で表示するように定義しています．
 現状の `mystyle.sty` では流体力学に関係する雑誌名をある程度網羅しているつもりですが，他に引用する雑誌がある場合は自身で `\step[]` 要素を増やして対応してください．
+
+----
+
+## 便利なパッケージ
+
+このテンプレートでは[mystyle.sty](./mystyle.sty)に様々なパッケージを読み込んでいます．
+中でもとても便利なパッケージをいくつか紹介します．
+
+### [`physics` パッケージ](http://mirrors.ibiblio.org/CTAN/macros/latex/contrib/physics/physics.pdf)
+
+物理学で使う様々な記号や記法がサポートされています．
+このパッケージを使うとNavier-Stokes方程式が
+
+```latex
+% 普通に書く
+\begin{equation}
+  \frac{\partial \bm{u}}{\partial t} + (\bm{u} \cdot \bm{\nabla}) \bm{u} = -\bm{\nabla} p + \frac{1}{\mathrm{Re}} \nabla^2 \bm{u}
+\end{equation}
+
+% physicsパッケージを使って書く
+\begin{equation}
+  \pdv{\vb*{u}}{t} + \qty(\vb*{u} \vdot \grad) \vb*{u} &= - \grad{p} + \frac{1}{\Re} \laplacian{\vb*{u}}
+\end{equation}
+```
+
+となって微分量やベクトル演算子を書くのがかなり楽になります．
