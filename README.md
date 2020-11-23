@@ -173,12 +173,12 @@ git push origin HEAD
 ## 便利なパッケージ
 
 このテンプレートでは[mystyle.sty](./mystyle.sty)に様々なパッケージを読み込んでいます．
-中でもとても便利なパッケージをいくつか紹介します．
+中でもきわめて便利なパッケージをいくつか紹介します．
 
 ### [`physics` パッケージ](http://mirrors.ibiblio.org/CTAN/macros/latex/contrib/physics/physics.pdf)
 
 物理学で使う様々な記号や記法がサポートされています．
-このパッケージを使うとNavier-Stokes方程式が
+このパッケージを使うとNavier-Stokes方程式が，
 
 ```latex
 % 普通に書く
@@ -192,12 +192,11 @@ git push origin HEAD
 \end{equation}
 ```
 
-となって微分量やベクトル演算子を書くのがかなり楽になります．
+と書け，微分量やベクトル演算子がかなり楽に扱えます
 
 ### [`empheq` パッケージ](https://mirror.ibcp.fr/pub/CTAN/macros/latex/contrib/mathtools/empheq.pdf)
 
 連立方程式をきれいに書くためのパッケージです．
-[連立方程式を一番美しく書けるempheq](https://muscle-keisuke.hatenablog.com/entry/2015/11/23/122725)という記事に使い方がよくまとまっています．
 例を示すと，
 
 ```latex
@@ -218,7 +217,9 @@ git push origin HEAD
 \end{empheq}
 ```
 
-のようになります．
+のようになり，簡単に書けることが分かります．
+
+[連立方程式を一番美しく書けるempheq](https://muscle-keisuke.hatenablog.com/entry/2015/11/23/122725)という記事に使い方がよくまとまっています．
 
 ### [`siunitx` パッケージ](https://ctan.tetaneutral.net/macros/latex/contrib/siunitx/siunitx.pdf)
 
