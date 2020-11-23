@@ -193,3 +193,29 @@ git push origin HEAD
 ```
 
 となって微分量やベクトル演算子を書くのがかなり楽になります．
+
+### [`empheq` パッケージ](https://mirror.ibcp.fr/pub/CTAN/macros/latex/contrib/mathtools/empheq.pdf)
+
+連立方程式をきれいに書くためのパッケージです．
+[連立方程式を一番美しく書けるempheq](https://muscle-keisuke.hatenablog.com/entry/2015/11/23/122725)という記事に使い方がよくまとまっています．
+例を示すと，
+
+```latex
+% alignパッケージを使って書く
+\begin{align}
+\left\{
+  \begin{array}{ll}
+    \div{\vb*{u}} &= 0 \\
+    \partial_i u_i &= 0
+  \end{array}
+\right.
+\end{align}
+
+% empheqパッケージを使って書く
+\begin{empheq}[left=\empheqlbrace]{align}
+  \div{\vb*{u}} &= 0 \\
+  \partial_i u_i &= 0
+\end{empheq}
+```
+
+のようになります．
