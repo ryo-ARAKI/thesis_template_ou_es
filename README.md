@@ -219,3 +219,14 @@ git push origin HEAD
 ```
 
 のようになります．
+
+### [`siunitx` パッケージ](https://ctan.tetaneutral.net/macros/latex/contrib/siunitx/siunitx.pdf)
+
+SI単位や単位付き数値を簡単に扱うためのパッケージです．
+
+```latex
+加速度の単位は\si{m \per s^{-2}}です．
+重力加速度は\SI{9.81}{\meter \per \second^{-2}}です．
+```
+
+のように使います．
