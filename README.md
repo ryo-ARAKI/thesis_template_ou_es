@@ -219,7 +219,9 @@ git push origin HEAD
 
 のようになり，簡単に書けることが分かります．
 
-[連立方程式を一番美しく書けるempheq](https://muscle-keisuke.hatenablog.com/entry/2015/11/23/122725)という記事に使い方がよくまとまっています．
+参考：
+
+- [連立方程式を一番美しく書けるempheq](https://muscle-keisuke.hatenablog.com/entry/2015/11/23/122725)
 
 ### [`siunitx` パッケージ](https://ctan.tetaneutral.net/macros/latex/contrib/siunitx/siunitx.pdf)
 
@@ -231,3 +233,7 @@ SI単位や単位付き数値を簡単に扱うためのパッケージです．
 ```
 
 のように使います．
+
+参考：
+
+- [単位：実験AのためのLaTeX小技集](https://uec.medit.link/latex/units.html)
