@@ -14,9 +14,9 @@
 
 非圧縮流体の運動は，Navier-Stokes方程式と非圧縮条件
 \begin{empheq}[left=\empheqlbrace]{align}
-  \pdv{\vb*{u}}{t} + \qty(\vb*{u} \cdot \grad) \vb*{u} &= - \grad p + \frac{1}{\Re} \laplacian \vb*{u}
+  \pdv{\vb*{u}}{t} + \qty(\vb*{u} \vdot \grad) \vb*{u} &= - \grad{p} + \frac{1}{\Re} \laplacian{\vb*{u}}
   \label{eq:LEHASU_NavierStokesEq} \\
-  \div \vb*{u} &= 0
+  \div{\vb*{u}} &= 0
   \label{eq:LEHASU_InCompressibility}
 \end{empheq}
 で記述される．
