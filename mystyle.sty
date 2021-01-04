@@ -132,7 +132,7 @@
         fieldsource=journal,
         match={Journal of Statistical Physics},
         replace={J. Stat. Phys.}]%
-      \step[fieldset=language, null]  % 言語を表示しない
+      % \step[fieldset=language, null]  % 言語を表示しない
       \step[fieldset=doi, null]  % doiを表示しない
     }
   }
@@ -182,8 +182,8 @@
 
 \renewcommand*{\finalnamedelim}{%
   \iflistundef{language}
-  {\ifnumgreater{\value{liststop}}{2}{\finalandcomma}{}%
-  \addcomma\space}
+  {\ifnumgreater{\value{liststop}}{2}{}{}%
+  \addspace\bibstring{and}\space}
   {\usebibmacro*{finalnamedelim:\strlist{language}}}
 }
 
