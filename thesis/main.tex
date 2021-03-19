@@ -29,7 +29,9 @@
   backend=biber,  % 文献ソートを担当（登場順なので不要？）
   style=phys,  % AIPとAPSのスタイル
   biblabel=brackets,  % 文献番号を [1] のように表記
-  pageranges=false]{biblatex}  % 文献のページ範囲を省略
+  pageranges=false,  % 文献のページ範囲を省略
+  maxbibnames=1  % 筆頭著者のみを表示
+]{biblatex}
 \addbibresource{../bib_textbooks.bib}  % 教科書など
 \addbibresource{../bib_articles.bib}  % 論文など（※Mendeleyで自動生成）
 % \addbibresource{/path/to/hogehoge.bib}  % 他にも追加可能
