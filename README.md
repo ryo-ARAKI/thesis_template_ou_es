@@ -184,6 +184,50 @@ git push origin HEAD
 
 ----
 
+## `latexdiff` を用いた差分管理
+
+Git(Hub)を用いて論文を執筆することで `.tex` の差分は管理できますが， `.pdf` 上の変更点は比較することができません．
+また，指導教員に添削をお願いする際も最新版のPDFを渡すだけではどこが変更されたのか分かりづらく，負担になってしまいます．
+より快適に原稿の更新と添削のサイクルを回すため， `latexdiff` を用いたPDF上での差分表示を推奨します．
+いま，修正前の `old.tex` と修正後の `new.tex` があったとき，
+
+```latex
+latexdiff -e utf8 -t CFONT --flatten old.tex new.tex > diff.tex
+latexmk diff.tex
+```
+
+のようにすれば，変更前の箇所が青色・小さいフォントサイズで，変更後の箇所が赤色・大きなフォントサイズで表示されたPDFが得られます．
+使用しているオプションは以下のとおりです．
+
+- `-e utf8` 文字エンコーディングの指定
+- `-t CFONT` 差分表示の指定．デフォルトだと打ち消し線と下波線での表示になるが，やや見づらいのでこちらがおすすめ
+- `--flatten` `input` などで読み込んでいる別の `.tex` ファイルを正しく制御するために必要
+
+文章に大きな修正を加えた際，作成した `diff.tex` がうまくコンパイルできないことがあります．
+そのような場合はデフォルトで `--math-markup=2` となっている数値を下げるなどすれば「おおらかに」修正点を取り扱ってくれるようです．
+
+- 参考
+  - [Overleaf: Using Latexdiff For Marking Changes To Tex Documents](https://www.overleaf.com/learn/latex/Articles/Using_Latexdiff_For_Marking_Changes_To_Tex_Documents)
+  - [にっき♪：latexdiff](http://abenori.blogspot.com/2016/06/latexdiff.html)
+
+### Gitと `latexdiff` の連携
+
+上記の例ではわざわざ `old.tex` と `new.tex` という2つのファイルを準備していましたが，これはいかにも面倒です．
+そこで，Gitを使った差分管理と連携するためのツールとして `latexdiff-vc` があります．
+先の例で `main.tex` というファイルの一つ前のコミットとの差分を見たいとすると
+
+```latex
+latexdiff-vc -e utf8 -t CFONT --flatten --git --force -r HEAD^ main.tex
+```
+
+で差分ファイルが出力されます．
+`-r` 以降に差分をとる対象を記述します．
+この例では直近のコミットを指定していますが，コミットハッシュやブランチ名も利用できます．
+
+- 参考：[Gitで管理しているLaTeXのdiffをpdfで見る(TeXLive2015版)](https://nekketsuuu.github.io/entries/2017/01/27/latexdiff-vc.html)
+
+----
+
 ## 便利なパッケージ
 
 このテンプレートでは[mystyle.sty](./mystyle.sty)に様々なパッケージを読み込んでいます．
