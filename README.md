@@ -270,3 +270,5 @@ SI単位や単位付き数値を簡単に扱うためのパッケージです．
 - [LaTeXにおける正しい論文の書き方](https://qiita.com/birdwatcher/items/5ec42b35d84d3ee2ffbb)
 - [アカデミックヤクザにキレられないためのLaTeX論文執筆メソッド](https://qiita.com/suigin/items/10960e516f2d44f6b6de)
   - 一部タイトルが不穏当ですが，非常によくまとまっているので論文を書き始める前に一通り目を通しておきましょう．
+- [LaTeXのTipsや備忘録](https://github.com/ryo-ARAKI/TIL/blob/master/latex_tips.md)
+  - 私がLaTeXを使っていてぶつかった問題点とその解決策をまとめています．
