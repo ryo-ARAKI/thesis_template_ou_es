@@ -9,6 +9,9 @@
 
 ## 使い方
 
+※以下の手順に従わず，ファイル一式を単純にダウンロードしてももちろん使用できますが，Git(Hub)を用いて差分管理しながら論文を執筆することを強く推奨します．
+Git(Hub)の勉強については[私が以前作成した資料](https://github.com/ryo-ARAKI/Saturday_LT/blob/master/git_tutorial/git_tutorial.md)と[スライド](https://github.com/ryo-ARAKI/Saturday_LT/blob/master/git_tutorial/git_tutorial.pdf)がありますが，断然おすすめなのは慶應大の渡辺先生の[GitHub演習](https://github.com/kaityo256/github)です．
+
 ### リポジトリの複製
 
 以下に `kisokou` というGitHubユーザーが `master_thesis` という名前でこのリポジトリを複製する手順を示します．
