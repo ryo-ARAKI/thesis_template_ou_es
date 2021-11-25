@@ -308,10 +308,16 @@ SI単位や単位付き数値を簡単に扱うためのパッケージです．
 
 ### その他
 
-- [Answer to 'What commands are there for horizontal spacing?'](https://tex.stackexchange.com/a/74354)
-  - 水平スペースにもいろいろな種類があるので適切なものを使いましょう．
-- [LaTeXにおける正しい論文の書き方](https://qiita.com/birdwatcher/items/5ec42b35d84d3ee2ffbb)
-- [アカデミックヤクザにキレられないためのLaTeX論文執筆メソッド](https://qiita.com/suigin/items/10960e516f2d44f6b6de)
+- [akira-okumura：修士論文 LaTeX テンプレート](https://github.com/akira-okumura/MasterThesisTemplate)
+  - 名古屋大学の奥村先生による修論用のLaTeXテンプレートです．非常に充実しているのでぜひ目を通してください．このテンプレートで扱えていない内容として，
+    - §5 剽窃について
+    - §6 色覚多様性と作図
+
+    はかならず読んでおきましょう．
+- [Qiita: LaTeXにおける正しい論文の書き方](https://qiita.com/birdwatcher/items/5ec42b35d84d3ee2ffbb)
+- [Qiita: アカデミックヤクザにキレられないためのLaTeX論文執筆メソッド](https://qiita.com/suigin/items/10960e516f2d44f6b6de)
   - 一部タイトルが不穏当ですが，非常によくまとまっているので論文を書き始める前に一通り目を通しておきましょう．
 - [LaTeXのTipsや備忘録](https://github.com/ryo-ARAKI/TIL/blob/master/latex_tips.md)
   - 私がLaTeXを使っていてぶつかった問題点とその解決策をまとめています．
+- [StackOverflow: Answer to 'What commands are there for horizontal spacing?'](https://tex.stackexchange.com/a/74354)
+  - 水平スペースにもいろいろな種類があるので適切なものを使いましょう．
