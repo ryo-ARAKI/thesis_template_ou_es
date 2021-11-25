@@ -256,26 +256,17 @@ SI単位や単位付き数値を簡単に扱うためのパッケージです．
 ### [Detexify](http://detexify.kirelabs.org/classify.html)
 
 手（マウス）書きでLaTeXの記号を探せる．
-論文や教科書で出てきた見たことない記号を入力する際にとても便利
+論文や教科書で出てきた見たことない記号を入力する際にとても便利です．
 
 ### [svgnames Colors](https://www.latextemplates.com/svgnames-colors)
 
-`xcolor` パッケージに `svgnames` オプションをつけて読み込んだ際に利用できる色名の一覧．
-なお，本テンプレートでは
+`xcolor` パッケージに `svgnames` オプションをつけて読み込んだ際に利用できる色名の一覧です．
+なお，本テンプレートでは `xcolor` パッケージをオプション無しで読み込んだのち，documentclassのオプションとして `svgnames` を導入しています．
 
-```latex
-\usepackage{svgnames}
-```
+### その他
 
-とした後に文書のdocumentclassのオプションとして `svgnames` を導入している．
-
-### [Answer to 'What commands are there for horizontal spacing?'](https://tex.stackexchange.com/a/74354)
-
-水平スペースにもいろいろな種類があるので適切なものを使いましょう．
-
-### 論文を書く際の注意点について
-
+- [Answer to 'What commands are there for horizontal spacing?'](https://tex.stackexchange.com/a/74354)
+  - 水平スペースにもいろいろな種類があるので適切なものを使いましょう．
 - [LaTeXにおける正しい論文の書き方](https://qiita.com/birdwatcher/items/5ec42b35d84d3ee2ffbb)
 - [アカデミックヤクザにキレられないためのLaTeX論文執筆メソッド](https://qiita.com/suigin/items/10960e516f2d44f6b6de)
-
-非常によくまとまっているので，論文を書き始める前に一通り目を通しておきましょう．
+  - 一部タイトルが不穏当ですが，非常によくまとまっているので論文を書き始める前に一通り目を通しておきましょう．
