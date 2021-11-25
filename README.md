@@ -58,36 +58,36 @@ git push origin HEAD
 
 1. `\usepackage{hyoshi_master}` でなく `\usepackage{hyoshi_bachelor}` を使う
 
-```LaTeX
-% ===========================================
-% 原稿設定
-% ===========================================
-\usepackage[normalem]{ulem}  % 卒論の二行組タイトルに下線をつける
-% 表紙用スタイルファイル
-\usepackage{hyoshi_bachelor}  % 卒論用
-% \usepackage{hyoshi_master}    % 修論用
-```
+    ```LaTeX
+    % ===========================================
+    % 原稿設定
+    % ===========================================
+    \usepackage[normalem]{ulem}  % 卒論の二行組タイトルに下線をつける
+    % 表紙用スタイルファイル
+    \usepackage{hyoshi_bachelor}  % 卒論用
+    % \usepackage{hyoshi_master}    % 修論用
+    ```
 
 2. 英語アブストラクト（ `thesis/text/abstract.tex` ）を読み込まない
 
-```LaTeX
-% ===========================================
-% 概要（英語） *****修士論文のみ（卒論は緒言）*****
-% ===========================================
-\pagenumbering{roman}
-% \input{./text/abstract.tex}
-% \clearpage
-```
+    ```LaTeX
+    % ===========================================
+    % 概要（英語） *****修士論文のみ（卒論は緒言）*****
+    % ===========================================
+    \pagenumbering{roman}
+    % \input{./text/abstract.tex}
+    % \clearpage
+    ```
 
 3. 緒言（ `thesis/text/chap1_introduction.tex` ）を読み込む
 
-```LaTeX
-% ===========================================
-% 緒言 *****卒業論文のみ？（修論は英語概要）*****
-% ===========================================
-\pagenumbering{arabic}  % 以降算用数字でページ番号を記述
-\input{./text/chap1_introduction.tex}
-```
+    ```LaTeX
+    % ===========================================
+    % 緒言 *****卒業論文のみ？（修論は英語概要）*****
+    % ===========================================
+    \pagenumbering{arabic}  % 以降算用数字でページ番号を記述
+    \input{./text/chap1_introduction.tex}
+    ```
 
 ----
 
