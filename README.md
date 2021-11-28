@@ -9,6 +9,9 @@
 
 ## 使い方
 
+※以下の手順に従わず，ファイル一式を単純にダウンロードしてももちろん使用できますが，Git(Hub)を用いて差分管理しながら論文を執筆することを強く推奨します．
+Git(Hub)の勉強については[私が以前作成した資料](https://github.com/ryo-ARAKI/Saturday_LT/blob/master/git_tutorial/git_tutorial.md)と[スライド](https://github.com/ryo-ARAKI/Saturday_LT/blob/master/git_tutorial/git_tutorial.pdf)がありますが，断然おすすめなのは慶應大の渡辺先生の[GitHub演習](https://github.com/kaityo256/github)です．
+
 ### リポジトリの複製
 
 以下に `kisokou` というGitHubユーザーが `master_thesis` という名前でこのリポジトリを複製する手順を示します．
@@ -58,36 +61,36 @@ git push origin HEAD
 
 1. `\usepackage{hyoshi_master}` でなく `\usepackage{hyoshi_bachelor}` を使う
 
-```LaTeX
-% ===========================================
-% 原稿設定
-% ===========================================
-\usepackage[normalem]{ulem}  % 卒論の二行組タイトルに下線をつける
-% 表紙用スタイルファイル
-\usepackage{hyoshi_bachelor}  % 卒論用
-% \usepackage{hyoshi_master}    % 修論用
-```
+    ```LaTeX
+    % ===========================================
+    % 原稿設定
+    % ===========================================
+    \usepackage[normalem]{ulem}  % 卒論の二行組タイトルに下線をつける
+    % 表紙用スタイルファイル
+    \usepackage{hyoshi_bachelor}  % 卒論用
+    % \usepackage{hyoshi_master}    % 修論用
+    ```
 
 2. 英語アブストラクト（ `thesis/text/abstract.tex` ）を読み込まない
 
-```LaTeX
-% ===========================================
-% 概要（英語） *****修士論文のみ（卒論は緒言）*****
-% ===========================================
-\pagenumbering{roman}
-% \input{./text/abstract.tex}
-% \clearpage
-```
+    ```LaTeX
+    % ===========================================
+    % 概要（英語） *****修士論文のみ（卒論は緒言）*****
+    % ===========================================
+    \pagenumbering{roman}
+    % \input{./text/abstract.tex}
+    % \clearpage
+    ```
 
 3. 緒言（ `thesis/text/chap1_introduction.tex` ）を読み込む
 
-```LaTeX
-% ===========================================
-% 緒言 *****卒業論文のみ？（修論は英語概要）*****
-% ===========================================
-\pagenumbering{arabic}  % 以降算用数字でページ番号を記述
-\input{./text/chap1_introduction.tex}
-```
+    ```LaTeX
+    % ===========================================
+    % 緒言 *****卒業論文のみ？（修論は英語概要）*****
+    % ===========================================
+    \pagenumbering{arabic}  % 以降算用数字でページ番号を記述
+    \input{./text/chap1_introduction.tex}
+    ```
 
 ----
 
@@ -181,6 +184,50 @@ git push origin HEAD
 
 ----
 
+## `latexdiff` を用いた差分管理
+
+Git(Hub)を用いて論文を執筆することで `.tex` の差分は管理できますが， `.pdf` 上の変更点は比較することができません．
+また，指導教員に添削をお願いする際も最新版のPDFを渡すだけではどこが変更されたのか分かりづらく，負担になってしまいます．
+より快適に原稿の更新と添削のサイクルを回すため， `latexdiff` を用いたPDF上での差分表示を推奨します．
+いま，修正前の `old.tex` と修正後の `new.tex` があったとき，
+
+```latex
+latexdiff -e utf8 -t CFONT --flatten old.tex new.tex > diff.tex
+latexmk diff.tex
+```
+
+のようにすれば，変更前の箇所が青色・小さいフォントサイズで，変更後の箇所が赤色・大きなフォントサイズで表示されたPDFが得られます．
+使用しているオプションは以下のとおりです．
+
+- `-e utf8` 文字エンコーディングの指定
+- `-t CFONT` 差分表示の指定．デフォルトだと打ち消し線と下波線での表示になるが，やや見づらいのでこちらがおすすめ
+- `--flatten` `input` などで読み込んでいる別の `.tex` ファイルを正しく制御するために必要
+
+文章に大きな修正を加えた際，作成した `diff.tex` がうまくコンパイルできないことがあります．
+そのような場合はデフォルトで `--math-markup=2` となっている数値を下げるなどすれば「おおらかに」修正点を取り扱ってくれるようです．
+
+- 参考
+  - [Overleaf: Using Latexdiff For Marking Changes To Tex Documents](https://www.overleaf.com/learn/latex/Articles/Using_Latexdiff_For_Marking_Changes_To_Tex_Documents)
+  - [にっき♪：latexdiff](http://abenori.blogspot.com/2016/06/latexdiff.html)
+
+### Gitと `latexdiff` の連携
+
+上記の例ではわざわざ `old.tex` と `new.tex` という2つのファイルを準備していましたが，これはいかにも面倒です．
+そこで，Gitを使った差分管理と連携するためのツールとして `latexdiff-vc` があります．
+先の例で `main.tex` というファイルの一つ前のコミットとの差分を見たいとすると
+
+```latex
+latexdiff-vc -e utf8 -t CFONT --flatten --git --force -r HEAD^ main.tex
+```
+
+で差分ファイルが出力されます．
+`-r` 以降に差分をとる対象を記述します．
+この例では直近のコミットを指定していますが，コミットハッシュやブランチ名も利用できます．
+
+- 参考：[Gitで管理しているLaTeXのdiffをpdfで見る(TeXLive2015版)](https://nekketsuuu.github.io/entries/2017/01/27/latexdiff-vc.html)
+
+----
+
 ## 便利なパッケージ
 
 このテンプレートでは[mystyle.sty](./mystyle.sty)に様々なパッケージを読み込んでいます．
@@ -230,9 +277,7 @@ git push origin HEAD
 
 のようになり，簡単に書けることが分かります．
 
-参考：
-
-- [連立方程式を一番美しく書けるempheq](https://muscle-keisuke.hatenablog.com/entry/2015/11/23/122725)
+- 参考：[連立方程式を一番美しく書けるempheq](https://muscle-keisuke.hatenablog.com/entry/2015/11/23/122725)
 
 ### [`siunitx` パッケージ](https://ctan.tetaneutral.net/macros/latex/contrib/siunitx/siunitx.pdf)
 
@@ -245,6 +290,34 @@ SI単位や単位付き数値を簡単に扱うためのパッケージです．
 
 のように使います．
 
-参考：
+- 参考：[単位：実験AのためのLaTeX小技集](https://uec.medit.link/latex/units.html)
 
-- [単位：実験AのためのLaTeX小技集](https://uec.medit.link/latex/units.html)
+----
+
+## 役立つリンク集
+
+### [Detexify](http://detexify.kirelabs.org/classify.html)
+
+手（マウス）書きでLaTeXの記号を探せる．
+論文や教科書で出てきた見たことない記号を入力する際にとても便利です．
+
+### [svgnames Colors](https://www.latextemplates.com/svgnames-colors)
+
+`xcolor` パッケージに `svgnames` オプションをつけて読み込んだ際に利用できる色名の一覧です．
+なお，本テンプレートでは `xcolor` パッケージをオプション無しで読み込んだのち，documentclassのオプションとして `svgnames` を導入しています．
+
+### その他
+
+- [akira-okumura：修士論文 LaTeX テンプレート](https://github.com/akira-okumura/MasterThesisTemplate)
+  - 名古屋大学の奥村先生による修論用のLaTeXテンプレートです．非常に充実しているのでぜひ目を通してください．このテンプレートで扱えていない内容として，
+    - §5 剽窃について
+    - §6 色覚多様性と作図
+
+    はかならず読んでおきましょう．
+- [Qiita: LaTeXにおける正しい論文の書き方](https://qiita.com/birdwatcher/items/5ec42b35d84d3ee2ffbb)
+- [Qiita: アカデミックヤクザにキレられないためのLaTeX論文執筆メソッド](https://qiita.com/suigin/items/10960e516f2d44f6b6de)
+  - 一部タイトルが不穏当ですが，非常によくまとまっているので論文を書き始める前に一通り目を通しておきましょう．
+- [LaTeXのTipsや備忘録](https://github.com/ryo-ARAKI/TIL/blob/master/latex_tips.md)
+  - 私がLaTeXを使っていてぶつかった問題点とその解決策をまとめています．
+- [StackOverflow: Answer to 'What commands are there for horizontal spacing?'](https://tex.stackexchange.com/a/74354)
+  - 水平スペースにもいろいろな種類があるので適切なものを使いましょう．
