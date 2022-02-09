@@ -174,29 +174,27 @@
 \renewcommand{\contentsname}{目次}
 %
 % ===========================================
-% biblatexのphysスタイルにおける日本語著者の識別子定義
+% biblatexのlangidによる日本語文献の識別子を定義
+% cf. biblatex で日本語文献をサポート https://gist.github.com/idiotWu/4879a88a3e34618cc8215a43ba2e9fbd
 % ===========================================
-\newbibmacro*{finalnamedelim:{japanese}}{%
-  \ifnumgreater{\value{liststop}}{2}{\finalandcomma}{}%
-  \addspace\multinamedelim
-}
-
-\renewcommand*{\finalnamedelim}{%
-  \iflistundef{language}
-  {\ifnumgreater{\value{liststop}}{2}{\finalandcomma}{}%
-  \addspace\bibstring{and}\space}
-  {\usebibmacro*{finalnamedelim:\strlist{language}}}
-}
-
-\newbibmacro*{name:given-family:{japanese}}[4]{%
-  \usebibmacro{name:delim}{#1#2}\usebibmacro{name:hook}{#1#2}#1\bibnamedelimc#2}
-
-\DeclareNameFormat{given-family}{%
-  \iflistundef{language}{%
-    \ifgiveninits
-      {\usebibmacro{name:given-family}{\namepartfamily}{\namepartgiveni}{\namepartprefix}{\namepartsuffix}}
-      {\usebibmacro{name:given-family}{\namepartfamily}{\namepartgiven}{\namepartprefix}{\namepartsuffix}}
-  }
-  {\usebibmacro*{name:given-family:\strlist{language}}{\namepartfamily}{\namepartgiven}{\namepartprefix}{\namepartsuffix}}
-  \usebibmacro{name:andothers}
+\AtEveryBibitem{
+  % langid={Japanese} で識別
+  \iffieldequalstr{langid}{Japanese} {
+    % コンマで区切り
+    \DeclareDelimFormat{finalnamedelim}{%
+      \ifnumgreater{\value{liststop}}{2}{\finalandcomma}{}%
+      \addspace\multinamedelim
+    }
+    % 名前を「姓 名」の順に
+    \DeclareNameFormat{default}{%
+      \usebibmacro{name:delim}{\namepartfamily\namepartgiven}%
+      \usebibmacro{name:hook}{\namepartfamily\namepartgiven}%
+      \namepartfamily\bibnamedelimc\namepartgiven%
+      \usebibmacro{name:andothers}
+    }
+    % URLの参照日付を年/月/日で表示
+    \DeclareFieldFormat{urldate}{%
+      （\thefield{urlyear}/\thefield{urlmonth}/\thefield{urlday}~に参照\isdot）
+    }
+  }{}
 }
