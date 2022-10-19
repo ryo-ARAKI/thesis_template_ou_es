@@ -11,6 +11,9 @@
 
 乱流とは流体が時空間的にきわめて乱れたふるまいをする現象であり，身の回りのいたるところでみられる．
 乱流を普遍的に記述することは理学的にも工学的にも重要な問題であり，長年に渡り膨大な研究がおこなわれてきた~\cite{tennekes1972first,Landau1987Fluid,KidaYanase,frisch1995tlk}．
+\begin{tcolorbox}
+  複数の文献を一度に引用する場合，\texttt{cite}コマンドを複数使うのではなく上記のようにする．
+\end{tcolorbox}
 
 非圧縮流体の運動はNavier-Stokes方程式と非圧縮条件
 \begin{empheq}[left=\empheqlbrace]{align}
@@ -19,6 +22,9 @@
   \div{\vb*{u}} &= 0
   \label{eq:LEHASU_InCompressibility}
 \end{empheq}
+\begin{tcolorbox}
+  複数行だての数式を執筆するのに\texttt{empheq}パッケージを，ベクトルや演算子の記述に\texttt{physics}パッケージを用いている．
+\end{tcolorbox}
 で記述される．
 これらの方程式は流れのマクロな特徴速さスケール\(U\)と特徴長さスケール\(L\)で無次元化されており，無次元量であるReynolds数
 \begin{equation}
@@ -28,6 +34,9 @@
 に支配されている．
 ただし，\(\nu\)は流体の動粘性係数である．
 \(\Re\)は流体に作用する慣性と粘性の比，非線形項と線形項の比，あるいは流れに注入されるエネルギ流束の大きさを表すパラメータなどと表現される~\cite[p.~8, p.~409]{Tatsumi}．
+\begin{tcolorbox}
+  参考文献でページ数まで指定したい場合，上記のようにする．
+\end{tcolorbox}
 一般に\(\Re\)が\(\order{10^3}\)を超えると流れは乱流となる．
 
 乱流を説明する現象論として，Richardsonの提唱したエネルギカスケード描像がある~\cite{Goto2017a,GotoJPS2018}．
@@ -37,7 +46,8 @@
   \includegraphics[bb=0.000000 0.000000 594.189270 578.870117, width=0.6\textwidth]{EnergyCascade_Schematic.pdf}
   \caption{
     エネルギカスケード描像の模式図．
-    図の上部が大スケール渦，下部が小スケール渦を表し，エネルギが大スケールから小スケールに（上から下に）「カスケード」する様子を模式的に示している．}
+    図の上部が大スケール渦，下部が小スケール渦を表し，エネルギが大スケールから小スケールに（上から下に）「カスケード」する様子を模式的に示している．
+  }
   \label{fig:EnergyCascade_Schematic.pdf}
 \end{figure}
 この描像は乱流をさまざまなスケールの渦を用いて説明する．
