@@ -2,9 +2,17 @@
 \label{chap:Appendix}
 \renewcommand{\thechapter}{A}  % 章番号をAに設定
 \addcontentsline{toc}{chapter}{付録}  % 目次には表示
-\setcounter{section}{0}  % 節番号をリセット
-\setcounter{equation}{0}  % 式番号をリセット
-\setcounter{figure}{0}  % 図番号をリセット
+
+\begin{tcolorbox}
+  本文に書くと冗長になる
+  \begin{itemize}
+    \item 実験の手順
+    \item 数値計算や解析の（重要ではない）アルゴリズム
+    \item 生データやより詳細な結果を示す図，表
+  \end{itemize}
+  などをここに執筆する．
+  なお，本文とは独立した章番号としている．
+\end{tcolorbox}
 
 
 \section{PIVにおける誤ベクトル判定アルゴリズム}
