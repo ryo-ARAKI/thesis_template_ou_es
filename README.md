@@ -303,6 +303,7 @@ SI単位や単位付き数値を簡単に扱うためのパッケージです．
 
 ### その他
 
+- `self_checklist.md` に，論文を先生に見てもらう前にチェックすべきことをまとめてあります．
 - [akira-okumura：修士論文 LaTeX テンプレート](https://github.com/akira-okumura/MasterThesisTemplate)
   - 名古屋大学の奥村先生による修論用のLaTeXテンプレートです．非常に充実しているのでぜひ目を通してください．このテンプレートで扱えていない内容として，
     - §5 剽窃について
