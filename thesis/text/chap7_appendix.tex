@@ -14,15 +14,15 @@
 \label{subsec:BOP_MedianFilter}
 
 近傍流速ベクトルの中央値を用いたフィルタリングで誤ベクトルを除去する~\cite[p.161]{PIVhandbook}．
-PIVによって格子状に得られた流速場のうち， \((i,j)\) 座標における流速ベクトルを \(\vb*{u}_{i,j}\) と書く．
-このベクトルの周囲に存在する最大8本の流速ベクトルの中央値ベクトル \(\vb*{u}_M\) を算出する．
-このとき，閾値を \(\delta_\mathrm{th}=2\) として
+PIVによって格子状に得られた流速場のうち，\((i,j)\)座標における流速ベクトルを\(\vb*{u}_{i,j}\)と書く．
+このベクトルの周囲に存在する最大8本の流速ベクトルの中央値ベクトル\(\vb*{u}_M\)を算出する．
+このとき，閾値を\(\delta_\mathrm{th}=2\)として
 \begin{equation}
   \abs{\vb*{u}_{i,j} - \vb*{u}_M} \ge \delta_\mathrm{th}
   \label{eq:BOP_MF_DefOfMedianFilter}
 \end{equation}
 となるものを誤ベクトルと判定する．
-ただし，実装上はベクトル \(\vb*{u} = (u,v)\) の成分自乗和を用いて
+ただし，実装上はベクトル\(\vb*{u} = (u,v)\)の成分自乗和を用いて
 \begin{empheq}{align}
   \abs{\vb*{u}_{i,j}}^2 - \abs{\vb*{u}_{i,j}}^2 &\equiv (u_{i,j}^2+v_{i,j}^2) - (u_{M:i,j}^2+v_{M:i,j}^2) \nonumber \\
     &\ge \delta_\mathrm{th}^2
