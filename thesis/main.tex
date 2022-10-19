@@ -19,8 +19,12 @@
 % 図・表関係
 % ===========================================
 \usepackage{graphicx}
-\graphicspath{{./pics/}}  % \includegraphicsで参照するディレクトリ
-%これを \graphicspath{{./pics/}, {/path/to/figure/directory/}} のように書けば複数のディレクトリの画像を参照できる．
+\graphicspath{  % \includegraphicsで参照するディレクトリ
+  {./pics/}
+}
+% {/path/to/figure/directory/} のように画像が保存されているディレクトリを追加すれば，いちいち画像をコピーせずに読み込める
+% 異なるPCで書き進める場合やクラウドサービスで執筆する場合はすべての画像を `./pics' に入れておくこと．
+\usepackage{tikz}
 %
 % ===========================================
 % 参考文献
