@@ -22,19 +22,30 @@
 \setbeamercovered{transparent}  % \pause や \onslide 環境など表示されるタイミング以外でも薄く表示する
 %
 % ===========================================
+% itemize環境中で数式を使う際のスペーシングを修正
+% cf. https://tex.stackexchange.com/questions/439869/problems-with-spacing-beamer-itemize-and-equation
+% ===========================================
+\g@addto@macro\normalsize{
+\setlength\abovedisplayskip{5pt}
+\setlength\belowdisplayskip{5pt}
+\setlength\abovedisplayshortskip{5pt}
+\setlength\belowdisplayshortskip{5pt}
+}
+%
+% ===========================================
 % フォント設定
 % ===========================================
 \usepackage{textgreek}
-% ソースコードの表示
+% ソースコードの表示：\begin{frame}[fragile]オプションが必要
 \usepackage{listings}
 \lstset{
-  %% language={C}, %プログラミング言語によって変える。
+  language={Fortran},
   basicstyle={\ttfamily},
   keywordstyle={\color{blue}},
   commentstyle={\color{green}},
   stringstyle=\color{red},
   tabsize=2,
-  %% breaklines=true, %折り返し
+  breaklines=true,
 }
 %
 % ===========================================
@@ -43,9 +54,12 @@
 \newcommand{\stress}[1]{{\colorbox{Pink}{#1}}}  % 強調箇所
 \setbeamercolor{advanced}{fg=black,bg=Wheat}  % 発展した情報を扱うための薄ピンク背景，黒文字の色付きbox
 \setbeamercolor{stress}{fg=black,bg=Pink}  % 強調を表すためのピンク背景・黒文字の色付きbox
+\setbeamercolor{stress2}{fg=black,bg=Gold}  % 強調を表すための黄色背景・黒文字の色付きbox
 % tikzを使った強調構文
-\newcommand{\highlight}[2][yellow]{\tikz[baseline=(x.base)]{\node[rectangle,rounded corners,fill=#1!10](x){#2};}}
-\newcommand{\highlightcap}[3][yellow]{\tikz[baseline=(x.base)]{\node[rectangle,rounded corners,fill=#1!10](x){#2} node[below of=x, color=#1]{#3};}}
+\newcommand{\highlight}[2][yellow]{\tikz[baseline=(x.base)]{\node[rectangle,rounded corners,fill=#1!30](x){#2};}}
+\newcommand{\highlightcap}[3][yellow]{\tikz[baseline=(x.base)]{\node[rectangle,rounded corners,fill=#1!30](x){#2} node[below of=x, color=#1]{#3};}}
+% itemize環境で赤いbulletを使う
+\newenvironment{redenv}{\only{\setbeamercolor{local structure}{fg=red}}}{}
 %
 % ===========================================
 % 補足ページに関する設定
@@ -58,6 +72,25 @@
 \newcommand{\backupend}{
 \addtocounter{framenumberappendix}{-\value{framenumber}}
 \addtocounter{framenumber}{\value{framenumberappendix}}
+}
+%
+% ===========================================
+% 参考文献の書式設定
+% https://tex.stackexchange.com/questions/291296/biblatex-beamer-missing-citation-abbreviation-in-the-bibliography
+% ===========================================
+\renewcommand*{\labelalphaothers}{}
+\DeclareLabelalphaTemplate{
+  \labelelement{
+    \field[final]{shorthand}
+    \field{labelname}
+    \field{label}
+  }
+  \labelelement{
+    \literal{\addhighpenspace}
+  }
+  \labelelement{
+    \field{year}
+  }
 }
 %
 % ===========================================
