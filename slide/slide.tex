@@ -5,8 +5,9 @@
 % 図・表関係
 % ===========================================
 \usepackage{graphicx}  % documentclassのオプションに draft を追加 -> ダミー図となりコンパイルが早くなる
-\graphicspath{{../thesis/pics/}}  % \includegraphicsで参照するディレクトリ
-%これを \graphicspath{{../thesis/pics/}, {/path/to/figure/directory/}} のように書けば複数のディレクトリの画像を参照できる．
+\graphicspath{  % \includegraphicsで参照するディレクトリ
+  {../thesis/pics/}
+}
 \usepackage{graphbox}
 \usepackage[font=small,labelfont=bf]{caption}
 %

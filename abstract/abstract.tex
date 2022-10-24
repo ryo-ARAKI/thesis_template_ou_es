@@ -20,29 +20,29 @@
 % 一行あたり文字数と一ページあたり行数の指定
 \makeatletter
 \def\mojiparline#1{
-    \newcounter{mpl}
-    \setcounter{mpl}{#1}
-    \@tempdima=\linewidth
-    \advance\@tempdima by-\value{mpl}zw
-    \addtocounter{mpl}{-1}
-    \divide\@tempdima by \value{mpl}
-    \advance\kanjiskip by\@tempdima
-    \advance\parindent by\@tempdima
+  \newcounter{mpl}
+  \setcounter{mpl}{#1}
+  \@tempdima=\linewidth
+  \advance\@tempdima by-\value{mpl}zw
+  \addtocounter{mpl}{-1}
+  \divide\@tempdima by \value{mpl}
+  \advance\kanjiskip by\@tempdima
+  \advance\parindent by\@tempdima
 }
 \makeatother
 \def\linesparpage#1{
-    \baselineskip=\textheight
-    \divide\baselineskip by #1
+  \baselineskip=\textheight
+  \divide\baselineskip by #1
 }
 %
 % ===========================================
 % 図・表関係
 % ===========================================
-% \usepackage[draft]{graphicx}
 \usepackage{graphicx}
 \usepackage{wrapfig}  % 文章に囲まれた図の挿入
-\graphicspath{{../thesis/pics/}}  % \includegraphicsで参照するディレクトリ
-%これを \graphicspath{{../thesis/pics/}, {/path/to/figure/directory/}} のように書けば複数のディレクトリの画像を参照できる．
+\graphicspath{  % \includegraphicsで参照するディレクトリ
+  {../thesis/pics/}
+}
 \usepackage{setspace,caption}
 \captionsetup[figure]{font={stretch=0.8}}  % 図のキャプションのスペーシングを縮める
 %
@@ -53,14 +53,13 @@
 \setlength\bibitemsep{0.0\baselineskip}
 \addbibresource{../bib_textbooks.bib}  % 教科書など
 \addbibresource{../bib_articles.bib}  % 論文など
-\AtEveryBibitem{\clearlist{language}}  % 文献の言語情報を出力しない
 %
 % ===========================================
 % 独自スタイルの導入
 % ===========================================
 \usepackage{../mystyle}
 \renewcommand{\figurename}{Fig.}
-\usepackage{bxjalipsum}
+\usepackage{bxjalipsum}  % 日本語のダミー文章
 \DeclareSourcemap{
   % 論文のタイトルを非表示（mystyle.styで論文のタイトル表示からダブルクォーテーションを削除，という指示をしているのでここに書く）
   \maps[datatype=bibtex]{
@@ -70,13 +69,7 @@
     }
   }
 }
-%
-% ===========================================
-% 表紙の記述
-% ===========================================
-\title{\underline{title}}
-\author{name}
-\date{\today}
+
 
 % +++++++++++++++++++++++++++++++++++++++++++
 % 本文
