@@ -205,7 +205,6 @@ latexmk diff.tex
 
 文章に大きな修正を加えた際，作成した `diff.tex` がうまくコンパイルできないことがあります．
 そのような場合はデフォルトで `--math-markup=2` となっている数値を下げるなどすれば「おおらかに」修正点を取り扱ってくれるようです．
-また，参考文献周りでエラーが出る場合，差分ファイル中の参考文献を `.bbl` ファイルの内容で置き換えるとよいです．
 
 - 参考
   - [Overleaf: Using Latexdiff For Marking Changes To Tex Documents](https://www.overleaf.com/learn/latex/Articles/Using_Latexdiff_For_Marking_Changes_To_Tex_Documents)
