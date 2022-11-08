@@ -1,0 +1,116 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{Goto2017a}{article}{}
+      \name{author}{3}{}{%
+        {{hash=48a0595aea8e691ed3e8261a79e07c62}{%
+           family={Goto},
+           familyi={G\bibinitperiod},
+           given={Susumu},
+           giveni={S\bibinitperiod}}}%
+        {{hash=61488219129e8b05cdf12b2acf947e75}{%
+           family={Saito},
+           familyi={S\bibinitperiod},
+           given={Yuta},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=17c9608214e77e31fef469e579cb28e2}{%
+           family={Kawahara},
+           familyi={K\bibinitperiod},
+           given={Genta},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{bdf153bb7f6e55e140c762e58511215e}
+      \strng{fullhash}{b944131388428fb3ba945872fd7d7bb3}
+      \strng{bibnamehash}{b944131388428fb3ba945872fd7d7bb3}
+      \strng{authorbibnamehash}{b944131388428fb3ba945872fd7d7bb3}
+      \strng{authornamehash}{bdf153bb7f6e55e140c762e58511215e}
+      \strng{authorfullhash}{b944131388428fb3ba945872fd7d7bb3}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{abstract}{To draw a precise picture of the hierarchy of coherent vortices in spatially periodic turbulence at high Reynolds numbers and to understand its generation mechanism, we conduct direct numerical simulations of turbulence in a periodic cube. By objectively identifying the axes of vortex tubes at various length scales in the inertial range, we quantitatively show that the sustained turbulence consists of a hierarchy of antiparallel pairs of vortex tubes. These vortex tubes are created by being stretched in strain fields around 2-8 times larger vortices, whereas they are weakened by strain around half-scale vortices. Temporal tracking of identified vortex tubes shows that they tend to form antiparallel pairs from the moment they are created. We examine three different external forces to show that the hierarchical structure of antiparallel vortex pairs is robust and its statistical features in inertial length scales are independent of the force. The turbulence that is sustained by steady forces is quasiperiodic in time and its significant temporal fluctuations are caused by successive creation of strong vortex tubes within the hierarchy.}
+      \field{issn}{2469990X}
+      \field{journaltitle}{Phys. Rev. Fluids}
+      \field{number}{6}
+      \field{volume}{2}
+      \field{year}{2017}
+      \field{pages}{64603}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/PhysRevFluids.2.064603
+      \endverb
+      \verb{file}
+      \verb :home/ryo/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Goto, Saito, Kawahara - 2017 - Hierarchy of antiparallel vortex tubes in spatially periodic turbulence at high Reynolds numbers.pdf:pdf
+      \endverb
+    \endentry
+    \entry{GotoJPS2018}{article}{}
+      \name{author}{1}{}{%
+        {{hash=23283ace58d3e934149e068e013bd217}{%
+           family={後藤},
+           familyi={後\bibinitperiod},
+           given={晋},
+           giveni={晋\bibinitperiod}}}%
+      }
+      \strng{namehash}{23283ace58d3e934149e068e013bd217}
+      \strng{fullhash}{23283ace58d3e934149e068e013bd217}
+      \strng{bibnamehash}{23283ace58d3e934149e068e013bd217}
+      \strng{authorbibnamehash}{23283ace58d3e934149e068e013bd217}
+      \strng{authornamehash}{23283ace58d3e934149e068e013bd217}
+      \strng{authorfullhash}{23283ace58d3e934149e068e013bd217}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{journaltitle}{日本物理学会誌}
+      \field{langid}{Japanese}
+      \field{number}{7}
+      \field{volume}{73}
+      \field{year}{2018}
+      \field{pages}{457\bibrangedash 462}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.11316/butsuri.73.7_457
+      \endverb
+    \endentry
+    \entry{Araki_master_thesis}{article}{}
+      \name{author}{1}{}{%
+        {{hash=674f14845d038731ce31f23c8f07cf75}{%
+           family={荒木},
+           familyi={荒\bibinitperiod},
+           given={亮},
+           giveni={亮\bibinitperiod}}}%
+      }
+      \strng{namehash}{674f14845d038731ce31f23c8f07cf75}
+      \strng{fullhash}{674f14845d038731ce31f23c8f07cf75}
+      \strng{bibnamehash}{674f14845d038731ce31f23c8f07cf75}
+      \strng{authorbibnamehash}{674f14845d038731ce31f23c8f07cf75}
+      \strng{authornamehash}{674f14845d038731ce31f23c8f07cf75}
+      \strng{authorfullhash}{674f14845d038731ce31f23c8f07cf75}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{journaltitle}{大阪大学基礎工学研究科 修士論文}
+      \field{langid}{Japanese}
+      \field{year}{2020}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
