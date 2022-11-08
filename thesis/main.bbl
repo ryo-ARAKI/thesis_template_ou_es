@@ -92,11 +92,15 @@
     \entry{KidaYanase}{book}{}
       \name{author}{2}{}{%
         {{hash=137b9564b00452f425b80539faf33745}{%
-           family={木田\bibnamedelima 重雄},
-           familyi={木\bibinitperiod\bibinitdelim 重\bibinitperiod}}}%
+           family={木田},
+           familyi={木\bibinitperiod},
+           given={重雄},
+           giveni={重\bibinitperiod}}}%
         {{hash=cef35690d64549044825ed2fd6ed1d5f}{%
-           family={柳瀬\bibnamedelima 眞一郎},
-           familyi={柳\bibinitperiod\bibinitdelim 眞\bibinitperiod}}}%
+           family={柳瀬},
+           familyi={柳\bibinitperiod},
+           given={眞一郎},
+           giveni={眞\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
         {朝倉書店}%
@@ -143,8 +147,10 @@
     \entry{Tatsumi}{book}{}
       \name{author}{1}{}{%
         {{hash=1036573bc6a27b96c6710ce3da54649a}{%
-           family={巽\bibnamedelima 友正},
-           familyi={巽\bibinitperiod\bibinitdelim 友\bibinitperiod}}}%
+           family={巽},
+           familyi={巽\bibinitperiod},
+           given={友正},
+           giveni={友\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
         {培風館}%
@@ -218,8 +224,10 @@
     \entry{GotoJPS2018}{article}{}
       \name{author}{1}{}{%
         {{hash=23283ace58d3e934149e068e013bd217}{%
-           family={後藤\bibnamedelima 晋},
-           familyi={後\bibinitperiod\bibinitdelim 晋\bibinitperiod}}}%
+           family={後藤},
+           familyi={後\bibinitperiod},
+           given={晋},
+           giveni={晋\bibinitperiod}}}%
       }
       \strng{namehash}{23283ace58d3e934149e068e013bd217}
       \strng{fullhash}{23283ace58d3e934149e068e013bd217}
@@ -263,8 +271,10 @@
     \entry{Ishioka_spectral}{book}{}
       \name{author}{1}{}{%
         {{hash=4d3dd6afa26d3169e2fe840417c49014}{%
-           family={石岡\bibnamedelima 圭一},
-           familyi={石\bibinitperiod\bibinitdelim 圭\bibinitperiod}}}%
+           family={石岡},
+           familyi={石\bibinitperiod},
+           given={圭一},
+           giveni={圭\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
         {東京大学出版会}%
@@ -287,8 +297,10 @@
     \entry{Kajishima_turbulence_simulation}{book}{}
       \name{author}{1}{}{%
         {{hash=4e55811110a5c9fc2f5aec30374f816e}{%
-           family={梶島\bibnamedelima 岳夫},
-           familyi={梶\bibinitperiod\bibinitdelim 岳\bibinitperiod}}}%
+           family={梶島},
+           familyi={梶\bibinitperiod},
+           given={岳夫},
+           giveni={岳\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
         {養賢堂}%
@@ -310,8 +322,10 @@
     \entry{1994fem_mathematics}{book}{}
       \name{author}{1}{}{%
         {{hash=d9dea6a11255e0060c6325c16f1e6669}{%
-           family={菊地\bibnamedelima 文雄},
-           familyi={菊\bibinitperiod\bibinitdelim 文\bibinitperiod}}}%
+           family={菊地},
+           familyi={菊\bibinitperiod},
+           given={文雄},
+           giveni={文\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
         {培風館}%
@@ -516,8 +530,10 @@
     \entry{Araki_master_thesis}{article}{}
       \name{author}{1}{}{%
         {{hash=674f14845d038731ce31f23c8f07cf75}{%
-           family={荒木\bibnamedelima 亮},
-           familyi={荒\bibinitperiod\bibinitdelim 亮\bibinitperiod}}}%
+           family={荒木},
+           familyi={荒\bibinitperiod},
+           given={亮},
+           giveni={亮\bibinitperiod}}}%
       }
       \strng{namehash}{674f14845d038731ce31f23c8f07cf75}
       \strng{fullhash}{674f14845d038731ce31f23c8f07cf75}
