@@ -99,6 +99,8 @@
 - [ ] 図は白黒で印刷されても理解できるようになっている．
   - 例：複数の線を色のみで区別するのではなく，線種や線の太さでも区別できるようにする．
   - 図中で使われている色が色覚多様性に配慮したものになっていることを確認する．[akira-okumura：修士論文 LaTeX テンプレート](https://github.com/akira-okumura/MasterThesisTemplate)の「§6 色覚多様性と作図」を必ず読んでおくこと．
+- [ ] 表の枠線が過剰/不足していない
+  - 全体を囲む枠線は基本的に不要．[サンプルPDF](https://github.com/ryo-ARAKI/thesis_template_ou_es/blob/master/thesis/sample/main_master.pdf)の表を参照せよ．
 - [ ] キャプションはそれのみから図が理解できるようなself-containedなものになっている．
   - 反対に本文では図表の考察をおこない，例えば凡例とパラメータの関係などは説明しない．
 - [ ] 図表は `\begin{figure}[t]` としてページの先頭に表示する．
