@@ -120,6 +120,10 @@
   - 例：ある特徴スケールにおけるエネルギ `\(E_L\)` "L"は長さスケールなのでイタリックで表記している．
   - [？] 例：Reynolds数 `\(\mathrm{Re}\)` 人名"Reynolds"に由来するものなのでmath romanとしている．
     - これについてはイタリックでの表記も広く見られるので，統一されていればどちらでもよい．
+  - [？] 微分記号の"d"は直立体とする．
+    - `physics` パッケージを使うとよい．[README：physicsパッケージ](https://github.com/ryo-ARAKI/thesis_template_ou_es/blob/master/thesis/sample/main_master.pdf)を参照せよ．
+  - [？] 虚数単位の"i"は直立体 `\(\mathrm{i}\)` とする．
+    - イタリックの `\(i\)` は添字として頻用するので区別したほうがよい．
 
 ## 参考文献
 
