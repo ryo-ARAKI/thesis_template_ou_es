@@ -38,7 +38,7 @@
 - [ ] 添削された箇所がすべて反映されている．
   - 添削された原稿を紙に印刷する，iPadのノートアプリに読み込むなどして，添削を反映したものを一つ一つ潰していくとよい．
 - [ ] 変更箇所が分かるファイルを準備している．
-  - `latexdiff` を使うと差分がハイライトされたPDFが作成できる．[README](https://github.com/ryo-ARAKI/thesis_template_ou_es#latexdiff-%E3%82%92%E7%94%A8%E3%81%84%E3%81%9F%E5%B7%AE%E5%88%86%E7%AE%A1%E7%90%86)を参照せよ．
+  - `latexdiff` を使うと差分がハイライトされたPDFが作成できる．[README： `latexdiff` を用いた差分管理](https://github.com/ryo-ARAKI/thesis_template_ou_es#latexdiff-%E3%82%92%E7%94%A8%E3%81%84%E3%81%9F%E5%B7%AE%E5%88%86%E7%AE%A1%E7%90%86)を参照せよ．
   - Gitと連携して `latexdiff-vc` を使うと差分管理さらに便利にできる．
 
 ## [修論] 英語アブストラクト
