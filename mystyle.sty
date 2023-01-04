@@ -7,7 +7,6 @@
 % フォント設定
 % ===========================================
 \usepackage{hyperref}  % 図・表・参考文献へのリンク
-\usepackage[utf8]{inputenc} % utf-8を使うためのパッケージ
 \usepackage{indentfirst}
 \usepackage{times} % Use the times font
 % \usepackage{palatino} % Uncomment to use the Palatino font
@@ -16,6 +15,20 @@
 % ===========================================
 % 図・表関係
 % ===========================================
+%%% Unknown document class (or package), (caption)のWarningの回避
+\setlength\abovecaptionskip{\f@size\p@}
+\setlength\belowcaptionskip{0\p@}
+\long\def\@makecaption#1#2{%
+  \vskip\abovecaptionskip
+  \sbox\@tempboxa{#1: #2}%
+  \ifdim \wd\@tempboxa >\hsize
+    #1: #2\par
+  \else
+    \global \@minipagefalse
+    \hb@xt@\hsize{\hfil\box\@tempboxa\hfil}%
+  \fi
+  \vskip\belowcaptionskip}
+%%%
 \usepackage{here}
 \usepackage{xcolor} % Specify colors by their 'svgnames', for a full list of all colors available see here: http://www.latextemplates.com/svgnames-colors
 \usepackage{booktabs} % 表の横罫線
@@ -40,7 +53,8 @@
   }}%
 % mathematical environment
 \usepackage{amsthm}
-\theoremstyle{assumption}
+% \theoremstyle{assumption}
+\theoremstyle{plain} % Unknown theoremstyle `assumption'.のWarningの回避
 \newtheorem*{assumption}{Assumption}
 %
 % ===========================================
