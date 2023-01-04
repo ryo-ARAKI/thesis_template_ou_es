@@ -29,6 +29,7 @@
 % ===========================================
 % 参考文献
 % ===========================================
+\usepackage[utf8]{inputenc} % Load 'inputenc' before biblatex.のWarningの回避．utf-8を使うためのパッケージ
 \usepackage[
   backend=biber,  % 文献ソートを担当（登場順なので不要？）
   style=phys,  % AIPとAPSのスタイル
@@ -59,6 +60,13 @@
 \renewcommand{\thefootnote}{\fnsymbol{footnote}}
 \usepackage{lipsum}  % ダミー文章
 \usepackage{bxjalipsum}  % 日本語のダミー文章
+
+\usepackage{csquotes} % 'babel/polyglossia' detected but 'csquotes' missing.のWarningの回避
+%%% Font shape `JY2/hmc/b/n' undefinedのWarningの回避
+\DeclareFontShape{JY2}{hmc}{b}{n}{<->ssub*hmc/bx/n}{}
+\DeclareFontShape{JT2}{hmc}{b}{n}{<->ssub*hmc/m/n}{}
+\DeclareFontShape{JY2}{hmc}{m}{it}{<->ssub*hmc/m/n}{}
+\DeclareFontShape{JT2}{hmc}{m}{it}{<->ssub*hmc/m/n}{}
 %
 % ===========================================
 % 表紙の記述

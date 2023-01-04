@@ -43,12 +43,11 @@
 \graphicspath{  % \includegraphicsで参照するディレクトリ
   {../thesis/pics/}
 }
-\usepackage{setspace,caption}
-\captionsetup[figure]{font={stretch=0.8}}  % 図のキャプションのスペーシングを縮める
 %
 % ===========================================
 % 参考文献
 % ===========================================
+\usepackage[utf8]{inputenc} % Load 'inputenc' before biblatex.のWarningの回避．utf-8を使うためのパッケージ
 \usepackage[backend=biber,style=phys,biblabel=brackets,pageranges=false,maxbibnames=3,doi=false]{biblatex}
 \setlength\bibitemsep{0.0\baselineskip}
 \addbibresource{../bib_textbooks.bib}  % 教科書など
@@ -58,6 +57,10 @@
 % 独自スタイルの導入
 % ===========================================
 \usepackage{../mystyle}
+\hypersetup{pdfborder={0 0 0}}  % hyperlinkの青枠線を表示しない
+\usepackage{setspace,caption} % Unknown document class (or package)のWarningの回避のためにmystyleのあとに書く
+\captionsetup[figure]{font={stretch=0.8}}  % 図のキャプションのスペーシングを縮める
+
 \renewcommand{\figurename}{Fig.}
 \usepackage{bxjalipsum}  % 日本語のダミー文章
 \DeclareSourcemap{
@@ -69,6 +72,13 @@
     }
   }
 }
+
+\usepackage{csquotes} % 'babel/polyglossia' detected but 'csquotes' missing.のWarningの回避
+%%% Font shape `JY2/hmc/b/n' undefinedのWarningの回避
+\DeclareFontShape{JY2}{hmc}{b}{n}{<->ssub*hmc/bx/n}{}
+\DeclareFontShape{JT2}{hmc}{b}{n}{<->ssub*hmc/m/n}{}
+\DeclareFontShape{JY2}{hmc}{m}{it}{<->ssub*hmc/m/n}{}
+\DeclareFontShape{JT2}{hmc}{m}{it}{<->ssub*hmc/m/n}{}
 
 
 % +++++++++++++++++++++++++++++++++++++++++++
@@ -95,7 +105,7 @@
   \caption{
     Figure caption figure caption figure caption.
   }
-  \label{fig:intruduction}
+  \label{fig:introduction}
   \vspace*{-\intextsep}
 \end{wrapfigure}
 
@@ -115,7 +125,7 @@
   \caption{
     Figure caption figure caption figure caption figure caption figure caption figure caption figure caption.
   }
-  \label{fig:intruduction}
+  \label{fig:experiment}
   \vspace*{-\intextsep}
 \end{wrapfigure}
 
