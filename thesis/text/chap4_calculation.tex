@@ -18,10 +18,10 @@
 \section{三次元円柱座標系におけるスペクトル要素Fourier法}
 \label{sec:SpectralElementFourierMethod}
 
-本研究では三次元円柱座標系\(\vb*{x} = (z,r,\theta)\)で
+本研究では三次元円柱座標系$\vb*{x} = (z,r,\theta)$で
 \begin{itemize}
-  \item 周方向（\(\theta\)方向）に一次元Fourierスペクトル法
-  \item 軸・半径方向（\(z,r\)方向）に二次元スペクトル要素法
+  \item 周方向（$\theta$方向）に一次元Fourierスペクトル法
+  \item 軸・半径方向（$z,r$方向）に二次元スペクトル要素法
 \end{itemize}
 を組み合わせたスペクトル要素Fourier法（spectral element-Fourier method）~\cite{Karniadakis1991,Blackburn2004}を実装した．
 
@@ -39,7 +39,7 @@
 
 \subsubsection{支配方程式の対角化}
 
-円柱座標系に起因する\(v_k, w_k\)の方程式の右辺に現れた余分な項を，対角化
+円柱座標系に起因する$v_k, w_k$の方程式の右辺に現れた余分な項を，対角化
 \begin{empheq}[left=\empheqlbrace]{align}
   \tilde{v}_k &= v_k +\mathrm{i} w_k \nonumber \\
   \tilde{w}_k &= v_k -\mathrm{i} w_k \nonumber \\
@@ -55,7 +55,7 @@
 
 \subsubsection{支配方程式の対称化}
 
-対角化された支配方程式に存在する\(1/r^2\)に関する特異点を除去するために\(r\)を乗じ，対称化された支配方程式と非圧縮条件
+対角化された支配方程式に存在する$1/r^2$に関する特異点を除去するために$r$を乗じ，対称化された支配方程式と非圧縮条件
 \begin{empheq}[left=\empheqlbrace]{align}
   \pdv{r u_k}{t} + r \qty[\vb*{N} (\vb*{u})_z]_k &= - r\pdv{z} p_k + \frac{1}{\Re} \qty( \pdv{z} r \pdv{z} + \frac{1}{r} \pdv{r} r \pdv{r} - \frac{k^2}{r} ) u_k \nonumber \\
   \pdv{r \tilde{v}_k}{t} + r \qty[\tilde{\vb*{N}} (\vb*{u})_r]_k &= - \qty(r\pdv{r} - k) p_k + \frac{1}{\Re} \qty( \pdv{z} r \pdv{z} + \pdv{r} r \pdv{r} - \frac{(k+1)^2}{r} ) \tilde{v}_k \nonumber \\
