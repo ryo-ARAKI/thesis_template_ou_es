@@ -21,31 +21,31 @@
   \datalist[entry]{none/global//global/global}
     \entry{tennekes1972first}{book}{}
       \name{author}{2}{}{%
-        {{hash=19e3fb2b82938e3d5693abfe9f4b3dc5}{%
+        {{hash=6e7a118e284ebd66fbabc0c8f4bec594}{%
            family={Tennekes},
            familyi={T\bibinitperiod},
-           given={H.},
+           given={Hendrik},
            giveni={H\bibinitperiod}}}%
-        {{hash=367246c5c044e12940eab86e09bb2e71}{%
+        {{hash=be8ece05a80e0b10446f677855380ff9}{%
            family={Lumley},
            familyi={L\bibinitperiod},
-           given={J.\bibnamedelimi L.},
+           given={John\bibnamedelima L.},
            giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
-        {Pe Men Book Company}%
+        {MIT Press}%
       }
-      \strng{namehash}{fc3b48617c7e63b1f42ab5f4b91ada8b}
-      \strng{fullhash}{fc3b48617c7e63b1f42ab5f4b91ada8b}
-      \strng{bibnamehash}{fc3b48617c7e63b1f42ab5f4b91ada8b}
-      \strng{authorbibnamehash}{fc3b48617c7e63b1f42ab5f4b91ada8b}
-      \strng{authornamehash}{fc3b48617c7e63b1f42ab5f4b91ada8b}
-      \strng{authorfullhash}{fc3b48617c7e63b1f42ab5f4b91ada8b}
+      \strng{namehash}{4c11ca254b6a58146b62d2d8ee3c9247}
+      \strng{fullhash}{4c11ca254b6a58146b62d2d8ee3c9247}
+      \strng{bibnamehash}{4c11ca254b6a58146b62d2d8ee3c9247}
+      \strng{authorbibnamehash}{4c11ca254b6a58146b62d2d8ee3c9247}
+      \strng{authornamehash}{4c11ca254b6a58146b62d2d8ee3c9247}
+      \strng{authorfullhash}{4c11ca254b6a58146b62d2d8ee3c9247}
       \field{sortinit}{1}
       \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{A {F}irst {C}ourse in {T}urbulence}
+      \field{title}{{A} {F}irst {C}ourse in {T}urbulence}
       \field{year}{1972}
     \endentry
     \entry{Landau1987Fluid}{book}{}
@@ -121,28 +121,27 @@
     \endentry
     \entry{frisch1995tlk}{book}{}
       \name{author}{1}{}{%
-        {{hash=4d7db2d5559b070c0834d43f00d4d528}{%
+        {{hash=af5752086aca103e7fa36d654ba6d4a8}{%
            family={Frisch},
            familyi={F\bibinitperiod},
-           given={U.},
+           given={Uriel},
            giveni={U\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
         {Cambridge University Press}%
       }
-      \strng{namehash}{4d7db2d5559b070c0834d43f00d4d528}
-      \strng{fullhash}{4d7db2d5559b070c0834d43f00d4d528}
-      \strng{bibnamehash}{4d7db2d5559b070c0834d43f00d4d528}
-      \strng{authorbibnamehash}{4d7db2d5559b070c0834d43f00d4d528}
-      \strng{authornamehash}{4d7db2d5559b070c0834d43f00d4d528}
-      \strng{authorfullhash}{4d7db2d5559b070c0834d43f00d4d528}
+      \strng{namehash}{af5752086aca103e7fa36d654ba6d4a8}
+      \strng{fullhash}{af5752086aca103e7fa36d654ba6d4a8}
+      \strng{bibnamehash}{af5752086aca103e7fa36d654ba6d4a8}
+      \strng{authorbibnamehash}{af5752086aca103e7fa36d654ba6d4a8}
+      \strng{authornamehash}{af5752086aca103e7fa36d654ba6d4a8}
+      \strng{authorfullhash}{af5752086aca103e7fa36d654ba6d4a8}
       \field{sortinit}{1}
       \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Turbulence: {T}he {L}egacy of {A}. {N}. {K}olmogorov}
       \field{year}{1995}
-      \keyw{imported}
     \endentry
     \entry{Tatsumi}{book}{}
       \name{author}{1}{}{%
@@ -419,9 +418,10 @@
       \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{edition}{2}
       \field{isbn}{9780198528692}
       \field{series}{Numerical Mathematics and Scientific Computation}
-      \field{title}{Spectral/hp Element Methods for Computational Fluid Dynamics: Second Edition}
+      \field{title}{Spectral/hp {E}lement {M}ethods for {C}omputational {F}luid {D}ynamics}
       \field{year}{2005}
       \verb{urlraw}
       \verb https://books.google.fr/books?id=mfpzYY4KsuwC
