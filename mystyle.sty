@@ -62,6 +62,7 @@
 % ===========================================
 \renewbibmacro{in:}{} % in: Some journal の "in:" を取る
 \DeclareFieldFormat[article]{title}{#1}  % 論文タイトルにダブルクォートをつけない
+\DeclareFieldFormat{journaltitle}{\mkbibitalic{#1}} % 雑誌名を斜体
 \DeclareFieldFormat[inbook]{title}{\mkbibitalic{#1}}  % 書籍のタイトルを斜体
 \DeclareFieldFormat[book]{title}{\mkbibitalic{#1}}  % 書籍のタイトルを斜体
 \DeclareSourcemap{%
