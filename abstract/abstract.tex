@@ -61,7 +61,8 @@
 \usepackage{setspace,caption} % Unknown document class (or package)のWarningの回避のためにmystyleのあとに書く
 \captionsetup[figure]{font={stretch=0.8}}  % 図のキャプションのスペーシングを縮める
 
-\renewcommand{\figurename}{Fig.}
+\renewcommand{\figurename}{図}
+\renewcommand{\tablename}{表}
 \usepackage{bxjalipsum}  % 日本語のダミー文章
 \DeclareSourcemap{
   % 論文のタイトルを非表示（mystyle.styで論文のタイトル表示からダブルクォーテーションを削除，という指示をしているのでここに書く）
@@ -103,10 +104,10 @@
   \centering
   \includegraphics[width=10zw]{example-image-9x16}
   \caption{
-    Figure caption figure caption figure caption.
+    図のキャプション，図のキャプション．
   }
   \label{fig:introduction}
-  \vspace*{-\intextsep}
+  \vspace*{-1.0zh} % 本文との間隔を調整するために\vspaceに適当な値（1zhは1行分，ptで指定もできる）を入れる
 \end{wrapfigure}
 
 \textcolor{LightGray}{
@@ -119,11 +120,11 @@
 % ===========================================
 
 \begin{wrapfigure}{r}{26zw}
-  \vspace*{-\intextsep}
+  \vspace*{-1.0zh} % 上に詰めて見出しの空白を有効活用する
   \centering
   \includegraphics[width=24zw]{example-image-16x9}
   \caption{
-    Figure caption figure caption figure caption figure caption figure caption figure caption figure caption.
+    図のキャプション，図のキャプション，図のキャプション，図のキャプション，図のキャプション．
   }
   \label{fig:experiment}
   \vspace*{-\intextsep}
@@ -158,9 +159,10 @@
     \label{subfig:i}
   }
   \caption{
-    Figure caption figure caption figure caption figure caption figure caption figure caption figure caption figure caption figure caption figure caption.
+    図のキャプション，図のキャプション，図のキャプション，図のキャプション，図のキャプション，図のキャプション，図のキャプション．
   }
   \label{fig:fig_result}
+  \vspace*{1.0zh}
 \end{figure}
 
 \textcolor{LightGray}{
@@ -172,7 +174,7 @@
 \section{結言}
 % ===========================================
 
-私は，〇〇〇という問題に注目し~\cite{Goto2017a,GotoJPS2018}，〜〜〜を明らかにした~\cite{Araki_master_thesis}．
+私は，〇〇〇という問題に注目し~\cite{Goto2017a,GotoJPS2018}，図~\ref{fig:fig_result}のように〜〜〜を明らかにした~\cite{Araki_master_thesis}．
 
 % ===========================================
 \printbibliography[title=参考文献]
