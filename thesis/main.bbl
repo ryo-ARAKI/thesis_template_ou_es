@@ -216,8 +216,11 @@
       \verb{doi}
       \verb 10.1103/PhysRevFluids.2.064603
       \endverb
-      \verb{file}
-      \verb :home/ryo/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Goto, Saito, Kawahara - 2017 - Hierarchy of antiparallel vortex tubes in spatially periodic turbulence at high Reynolds numbers.pdf:pdf
+      \verb{urlraw}
+      \verb https://doi.org/10.1103/PhysRevFluids.2.064603
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1103/PhysRevFluids.2.064603
       \endverb
     \endentry
     \entry{GotoJPS2018}{article}{}
@@ -382,14 +385,11 @@
       \verb{doi}
       \verb 10.1016/0021-9991(84)90128-1
       \endverb
-      \verb{file}
-      \verb :home/ryo/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Patera - 1984 - A spectral element method for fluid dynamics Laminar flow in a channel expansion.pdf:pdf
-      \endverb
       \verb{urlraw}
-      \verb http://ac.els-cdn.com/0021999184901281/1-s2.0-0021999184901281-main.pdf?{\_}tid=c861f39a-705c-11e7-b6f4-00000aab0f01{\&}acdnat=1500893126{\_}2be4030a1c29ba0916851d10afed7056
+      \verb https://doi.org/10.1016/0021-9991(84)90128-1
       \endverb
       \verb{url}
-      \verb http://ac.els-cdn.com/0021999184901281/1-s2.0-0021999184901281-main.pdf?%7B%5C_%7Dtid=c861f39a-705c-11e7-b6f4-00000aab0f01%7B%5C&%7Dacdnat=1500893126%7B%5C_%7D2be4030a1c29ba0916851d10afed7056
+      \verb https://doi.org/10.1016/0021-9991(84)90128-1
       \endverb
     \endentry
     \entry{karniadakis2005spectral}{book}{}
@@ -462,7 +462,7 @@
       \field{issn}{00219991}
       \field{journaltitle}{J. Comput. Phys.}
       \field{number}{2}
-      \field{title}{{High-Order Splitting Methods for the Incompressible Navier-Stokes Equations}}
+      \field{title}{{High-order splitting methods for the incompressible Navier-Stokes equations}}
       \field{volume}{97}
       \field{year}{1991}
       \field{pages}{414\bibrangedash 443}
@@ -470,14 +470,11 @@
       \verb{doi}
       \verb 10.1016/0021-9991(91)90007-8
       \endverb
-      \verb{file}
-      \verb :home/ryo/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Karniadakis, Israeli, Orszag - 1991 - High-Order Splitting Methods for the Incompressible Navier-Stokes Equations.pdf:pdf
-      \endverb
       \verb{urlraw}
-      \verb http://ac.els-cdn.com/0021999191900078/1-s2.0-0021999191900078-main.pdf?{\_}tid=e37a618a-705c-11e7-b6c1-00000aab0f27{\&}acdnat=1500893171{\_}0b52a52b3c558562702606f320fed37d http://dx.doi.org/10.1016/0021-9991(91)90007-8
+      \verb https://doi.org/10.1016/0021-9991(91)90007-8
       \endverb
       \verb{url}
-      \verb http://ac.els-cdn.com/0021999191900078/1-s2.0-0021999191900078-main.pdf?%7B%5C_%7Dtid=e37a618a-705c-11e7-b6c1-00000aab0f27%7B%5C&%7Dacdnat=1500893171%7B%5C_%7D0b52a52b3c558562702606f320fed37d%20http://dx.doi.org/10.1016/0021-9991(91)90007-8
+      \verb https://doi.org/10.1016/0021-9991(91)90007-8
       \endverb
     \endentry
     \entry{Blackburn2004}{article}{}
@@ -516,14 +513,11 @@
       \verb{doi}
       \verb 10.1016/j.jcp.2004.02.013
       \endverb
-      \verb{file}
-      \verb :home/ryo/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Blackburn, Sherwin - 2004 - Formulation of a Galerkin spectral element-Fourier method for three-dimensional incompressible flows in cyli.pdf:pdf
-      \endverb
       \verb{urlraw}
-      \verb http://ac.els-cdn.com/S0021999104000907/1-s2.0-S0021999104000907-main.pdf?{\_}tid=0d74ec8a-705d-11e7-9cef-00000aab0f01{\&}acdnat=1500893242{\_}8d87d1f74122d3618f7eee5259bda1c7
+      \verb https://doi.org/10.1016/j.jcp.2004.02.013
       \endverb
       \verb{url}
-      \verb http://ac.els-cdn.com/S0021999104000907/1-s2.0-S0021999104000907-main.pdf?%7B%5C_%7Dtid=0d74ec8a-705d-11e7-9cef-00000aab0f01%7B%5C&%7Dacdnat=1500893242%7B%5C_%7D8d87d1f74122d3618f7eee5259bda1c7
+      \verb https://doi.org/10.1016/j.jcp.2004.02.013
       \endverb
       \keyw{Cylindrical coordinates,Incompressible flow,Spectral element}
     \endentry
