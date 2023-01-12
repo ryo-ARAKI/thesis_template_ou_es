@@ -18,7 +18,7 @@
 \setbeamerfont{page number in head/foot}{family=\ttfamily,size=\large}
 \setbeamertemplate{navigation symbols}{}
 \usepackage{multicol}
-\setlength{\columnsep}{3zh}
+\setlength{\columnsep}{36pt}
 \setbeamercovered{transparent}  % \pause や \onslide 環境など表示されるタイミング以外でも薄く表示する
 %
 % ===========================================
@@ -73,6 +73,7 @@
 \addtocounter{framenumberappendix}{-\value{framenumber}}
 \addtocounter{framenumber}{\value{framenumberappendix}}
 }
+\renewcommand\appendixname{Appendix} % Token not allowed in a PDF string (PDFDocEncoding):(hyperref)	removing `\translate '. のVS CodeにおけるWarningの回避
 %
 % ===========================================
 % 参考文献の書式設定
