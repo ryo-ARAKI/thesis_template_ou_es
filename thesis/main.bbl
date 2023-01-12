@@ -1,5 +1,5 @@
 % $ biblatex auxiliary file $
-% $ biblatex bbl format version 3.2 $
+% $ biblatex bbl format version 3.1 $
 % Do not modify the above lines!
 %
 % This is an auxiliary file used by the 'biblatex' package.
@@ -42,7 +42,7 @@
       \strng{authornamehash}{4c11ca254b6a58146b62d2d8ee3c9247}
       \strng{authorfullhash}{4c11ca254b6a58146b62d2d8ee3c9247}
       \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{{A} {F}irst {C}ourse in {T}urbulence}
@@ -71,7 +71,7 @@
       \strng{authornamehash}{0c0920d244a4ef518dc023815875721c}
       \strng{authorfullhash}{0c0920d244a4ef518dc023815875721c}
       \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{2}
@@ -112,7 +112,7 @@
       \strng{authornamehash}{cc63c3d982ebdce6b946064e41484d14}
       \strng{authorfullhash}{cc63c3d982ebdce6b946064e41484d14}
       \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{langid}{Japanese}
@@ -137,7 +137,7 @@
       \strng{authornamehash}{af5752086aca103e7fa36d654ba6d4a8}
       \strng{authorfullhash}{af5752086aca103e7fa36d654ba6d4a8}
       \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Turbulence: {T}he {L}egacy of {A}. {N}. {K}olmogorov}
@@ -161,7 +161,7 @@
       \strng{authornamehash}{1036573bc6a27b96c6710ce3da54649a}
       \strng{authorfullhash}{1036573bc6a27b96c6710ce3da54649a}
       \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{9784563024215}
@@ -201,7 +201,7 @@
       \strng{authornamehash}{bdf153bb7f6e55e140c762e58511215e}
       \strng{authorfullhash}{b944131388428fb3ba945872fd7d7bb3}
       \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{To draw a precise picture of the hierarchy of coherent vortices in spatially periodic turbulence at high Reynolds numbers and to understand its generation mechanism, we conduct direct numerical simulations of turbulence in a periodic cube. By objectively identifying the axes of vortex tubes at various length scales in the inertial range, we quantitatively show that the sustained turbulence consists of a hierarchy of antiparallel pairs of vortex tubes. These vortex tubes are created by being stretched in strain fields around 2-8 times larger vortices, whereas they are weakened by strain around half-scale vortices. Temporal tracking of identified vortex tubes shows that they tend to form antiparallel pairs from the moment they are created. We examine three different external forces to show that the hierarchical structure of antiparallel vortex pairs is robust and its statistical features in inertial length scales are independent of the force. The turbulence that is sustained by steady forces is quasiperiodic in time and its significant temporal fluctuations are caused by successive creation of strong vortex tubes within the hierarchy.}
@@ -235,7 +235,7 @@
       \strng{authornamehash}{23283ace58d3e934149e068e013bd217}
       \strng{authorfullhash}{23283ace58d3e934149e068e013bd217}
       \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{日本物理学会誌}
@@ -252,7 +252,7 @@
     \endentry
     \entry{gotolab}{online}{}
       \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
       \field{labeltitlesource}{title}
       \field{langid}{Japanese}
       \field{title}{大阪大学基礎工学研究科~後藤研究室}
@@ -285,7 +285,7 @@
       \strng{authornamehash}{4d3dd6afa26d3169e2fe840417c49014}
       \strng{authorfullhash}{4d3dd6afa26d3169e2fe840417c49014}
       \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{9784130613057}
@@ -311,7 +311,7 @@
       \strng{authornamehash}{4e55811110a5c9fc2f5aec30374f816e}
       \strng{authorfullhash}{4e55811110a5c9fc2f5aec30374f816e}
       \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{langid}{Japanese}
@@ -336,7 +336,7 @@
       \strng{authornamehash}{d9dea6a11255e0060c6325c16f1e6669}
       \strng{authorfullhash}{d9dea6a11255e0060c6325c16f1e6669}
       \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{9784563033880}
@@ -366,7 +366,7 @@
       \strng{authornamehash}{1490b520da9a378c2cc19b6bd5b5b6ce}
       \strng{authorfullhash}{1490b520da9a378c2cc19b6bd5b5b6ce}
       \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{A spectral element method that combines the generality of the finite element method with the accuracy of spectral techniques is proposed for the numerical solution of the incompressible Navier-Stokes equations. In the spectral element discretization, the computational domain is broken into a series of elements, and the velocity in each element is represented as a high-order Lagrangian interpolant through Chebyshev collocation points. The hyperbolic piece of the governing equations is then treated with an explicit collocation scheme, while the pressure and viscous contributions are treated implicitly with a projection operator derived from a variational principle. The implementation of the technique is demonstrated on a one-dimensional inflow-outflow advection-diffusion equation, and the method is then applied to laminar two-dimensional (separated) flow in a channel expansion. Comparisons are made with experiment and previous numerical work. ?? 1984.}
@@ -415,7 +415,7 @@
       \strng{authornamehash}{1ebac8d52b595c8ffb6069891429b429}
       \strng{authorfullhash}{1ebac8d52b595c8ffb6069891429b429}
       \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{2}
@@ -455,7 +455,7 @@
       \strng{authornamehash}{8e75e7575e5a7eb654715b16a0d17189}
       \strng{authorfullhash}{5aa32cfc2acf429ed073877a91f1df53}
       \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{A new pressure formulation for splitting methods is developed that results in high-order time-accurate schemes for the solution of the incompressible Navier-Stokes equations. In particular, improved pressure boundary conditions of high order in time are introduced that minimize the effect of erroneous numerical boundary layers induced by splitting methods. A new family of stiffly stable schemes is employe d in mixed explicit/implicit time-intgration rules. These schemes exhibit much broader stability regions as compared to Adams-family schemes, typically used in splitting methods. Their stability properties rema in almost constant as the accuracy of the integration increases, so that robust third- or higher-order ti me-accurate schemes can readily be constructed that remain stable at relatively large CFL number. The new schemes are implemented within the framework of spectral element discretizations in space so that flexib ility and accuracy is guaranteed in the numerical experimentation. A model Stokes problem is studied in d etail, and several examples of Navier-Stokes solutions of flows in complex geometries are reported. Compa rison is made with the previously used first-order in time spectral element splitting and non-splitting ( e.g., Uzawa) schemes. High-order splitting/spectral element methods combine accuracy in space and time, a nd flexibility in geometry, and thus can be very efficient in direct simulations of turbulent flows in co mplex geometries.}
@@ -500,7 +500,7 @@
       \strng{authornamehash}{4393da7755a90304cb2a419e7f972a89}
       \strng{authorfullhash}{4393da7755a90304cb2a419e7f972a89}
       \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{A primitive-variable formulation for simulation of time-dependent incompressible flows in cylindrical coordinates is developed. Spectral elements are used to discretise the meridional semi-plane, coupled with Fourier expansions in azimuth. Unlike previous formulations where special distributions of nodal points have been used in the radial direction, the current work adopts standard Gauss-Lobatto-Legendre nodal-based expansions in both the radial and axial directions. Using a Galerkin projection of the symmetrised cylindrical Navier-Stokes equations, all geometric singularities are removed as a consequence of either the Fourier-mode dependence of axial boundary conditions or the shape of the weight function applied in the Galerkin projection. This observation implies that in a numerical implementation, geometrically singular terms can be naively treated by explicitly zeroing their contributions on the axis in integral expressions without recourse to special treatments such as l'Hopital's rule. Exponential convergence of the method both in the meridional semi-plane and in azimuth is demonstrated through application to a three-dimensional analytical solution of the Navier-Stokes equations in which flow crosses the axis.}
@@ -542,7 +542,7 @@
       \strng{authornamehash}{674f14845d038731ce31f23c8f07cf75}
       \strng{authorfullhash}{674f14845d038731ce31f23c8f07cf75}
       \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{大阪大学基礎工学研究科 修士論文}
@@ -566,7 +566,7 @@
       \strng{authornamehash}{9e4228d1a8e3ab04e2a2cd54ef932c2b}
       \strng{authorfullhash}{9e4228d1a8e3ab04e2a2cd54ef932c2b}
       \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{第2版}
