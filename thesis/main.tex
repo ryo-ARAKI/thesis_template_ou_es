@@ -69,6 +69,14 @@
 \DeclareFontShape{JT2}{hmc}{m}{it}{<->ssub*hmc/m/n}{}
 \DeclareFontShape{JY2}{hgt}{m}{it}{<->ssub*hgt/m/n}{}
 \DeclareFontShape{JT2}{hgt}{m}{it}{<->ssub*hgt/m/n}{}
+%%% Englishの場合のChapter関係の設定
+\ifthenelse{\equal{\lang}{J}}{}{
+  \usepackage{tocloft}
+  \setlength{\cftchapnumwidth}{24truemm} % 目次のChapterのインデント
+  \renewcommand{\cftchapafterpnum}{\vskip 5pt} % Chapter後のスペース
+  \renewcommand{\prechaptername}{Chapter~} % デフォルトは第
+  \renewcommand{\postchaptername}{} % デフォルトは章
+}
 %
 % ===========================================
 % 表紙の記述
