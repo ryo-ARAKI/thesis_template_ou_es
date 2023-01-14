@@ -208,7 +208,7 @@
       \field{issn}{2469990X}
       \field{journaltitle}{Phys. Rev. Fluids}
       \field{number}{6}
-      \field{title}{{Hierarchy of antiparallel vortex tubes in spatially periodic turbulence at high Reynolds numbers}}
+      \field{title}{Hierarchy of antiparallel vortex tubes in spatially periodic turbulence at high {R}eynolds numbers}
       \field{volume}{2}
       \field{year}{2017}
       \field{pages}{64603}
@@ -374,7 +374,7 @@
       \field{issn}{10902716}
       \field{journaltitle}{J. Comput. Phys.}
       \field{number}{3}
-      \field{title}{{A spectral element method for fluid dynamics: Laminar flow in a channel expansion}}
+      \field{title}{A spectral element method for fluid dynamics: {L}aminar flow in a channel expansion}
       \field{volume}{54}
       \field{year}{1984}
       \field{pages}{468\bibrangedash 488}
@@ -462,7 +462,7 @@
       \field{issn}{00219991}
       \field{journaltitle}{J. Comput. Phys.}
       \field{number}{2}
-      \field{title}{{High-Order Splitting Methods for the Incompressible Navier-Stokes Equations}}
+      \field{title}{High-Order Splitting Methods for the Incompressible {N}avier-{S}tokes Equations}
       \field{volume}{97}
       \field{year}{1991}
       \field{pages}{414\bibrangedash 443}
@@ -503,12 +503,12 @@
       \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{A primitive-variable formulation for simulation of time-dependent incompressible flows in cylindrical coordinates is developed. Spectral elements are used to discretise the meridional semi-plane, coupled with Fourier expansions in azimuth. Unlike previous formulations where special distributions of nodal points have been used in the radial direction, the current work adopts standard Gauss-Lobatto-Legendre nodal-based expansions in both the radial and axial directions. Using a Galerkin projection of the symmetrised cylindrical Navier-Stokes equations, all geometric singularities are removed as a consequence of either the Fourier-mode dependence of axial boundary conditions or the shape of the weight function applied in the Galerkin projection. This observation implies that in a numerical implementation, geometrically singular terms can be naively treated by explicitly zeroing their contributions on the axis in integral expressions without recourse to special treatments such as l'Hopital's rule. Exponential convergence of the method both in the meridional semi-plane and in azimuth is demonstrated through application to a three-dimensional analytical solution of the Navier-Stokes equations in which flow crosses the axis. {$\copyright$} 2004 Elsevier Inc. All rights reserved.}
+      \field{abstract}{A primitive-variable formulation for simulation of time-dependent incompressible flows in cylindrical coordinates is developed. Spectral elements are used to discretise the meridional semi-plane, coupled with Fourier expansions in azimuth. Unlike previous formulations where special distributions of nodal points have been used in the radial direction, the current work adopts standard Gauss-Lobatto-Legendre nodal-based expansions in both the radial and axial directions. Using a Galerkin projection of the symmetrised cylindrical Navier-Stokes equations, all geometric singularities are removed as a consequence of either the Fourier-mode dependence of axial boundary conditions or the shape of the weight function applied in the Galerkin projection. This observation implies that in a numerical implementation, geometrically singular terms can be naively treated by explicitly zeroing their contributions on the axis in integral expressions without recourse to special treatments such as l'Hopital's rule. Exponential convergence of the method both in the meridional semi-plane and in azimuth is demonstrated through application to a three-dimensional analytical solution of the Navier-Stokes equations in which flow crosses the axis.}
       \field{isbn}{00219991}
       \field{issn}{00219991}
       \field{journaltitle}{J. Comput. Phys.}
       \field{number}{2}
-      \field{title}{{Formulation of a Galerkin spectral element-Fourier method for three-dimensional incompressible flows in cylindrical geometries}}
+      \field{title}{Formulation of a {G}alerkin spectral element-{F}ourier method for three-dimensional incompressible flows in cylindrical geometries}
       \field{volume}{197}
       \field{year}{2004}
       \field{pages}{759\bibrangedash 778}
