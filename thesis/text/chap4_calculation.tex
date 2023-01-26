@@ -1,27 +1,27 @@
 \chapter{スペクトル要素Fourier法による直接数値計算}
 \label{chap:NumericalCalculation}
 
-本章では，スペクトル要素Fourier法により平滑円盤で駆動されるvon K\'arm\'an流を直接数値計算（DNS）した結果を報告する．
-\ref{sec:BasisOfSpectralElementMethod}節では，スペクトル要素法の基礎をまとめる．
-\ref{sec:SpectralElementFourierMethod}節では，円柱座標系で周方向に一次元Fourierスペクトル法，軸および半径方向に二次元スペクトル要素法を用いたスペクトル要素Fourier法のアルゴリズムをまとめる．
+本章では，スペクトル要素Fourier法により平滑円盤で駆動されるvon K\'arm\'an流を直接数値計算（Direct Numerical Simulation，DNS）した結果を報告する．
+\ref{sec:BasisOfSpectralElementMethod}節でスペクトル要素法の基礎をまとめる．
+\ref{sec:SpectralElementFourierMethod}節で円柱座標系で周方向に一次元Fourierスペクトル法，軸および半径方向に二次元スペクトル要素法を用いたスペクトル要素Fourier法のアルゴリズムをまとめる．
 
 
 \section{スペクトル要素法の基礎}
 \label{sec:BasisOfSpectralElementMethod}
 
-乱流の数値計算にはさまざまな手法が用いられる．
-スペクトル法とは適切な性質をもつ基底関数により物理量を波数空間に展開することを通じて問題を解く手法であり，高精度な半面領域形状が単純なものに制約される~\cite{Ishioka_spectral}．
-これに対し，複雑な形状の問題には空間を離散化し隣接する座標点の情報を用いる差分法~\cite{Kajishima_turbulence_simulation}や方程式を弱形式で定義し空間を離散化した「要素」の接点の情報を用いる有限要素法などが広く用いられている~\cite{1994fem_mathematics}．
-スペクトル要素法とは，1980年代に提唱された「スペクトル法の精度と有限要素法の一般性を融合した\footnote{``combines the generality of the finite element method with the accuracy of spectral techniques''~\cite{Patera1984}}」計算手法である~\cite{karniadakis2005spectral}．
+乱流の数値計算にはさまざまな手法が用いられてきた．
+スペクトル法とは適切な性質をもつ基底関数により物理量を波数空間に展開することで方程式を数値的に解く手法であり，高精度な反面領域で問題を考える領域形状が単純なものに制限される~\cite{Ishioka_spectral}．
+これに対し，きわめて複雑な形状の物体まわりの流れを計算する必要がある産業界では空間を離散化し隣接する座標点の情報を用いる差分法~\cite{Kajishima_turbulence_simulation}や方程式を弱形式で定義し空間を離散化した「要素」の接点の情報を用いる有限要素法などが広く用いられている~\cite{1994fem_mathematics}．
+本研究で用いるスペクトル要素法とは，1980年代に提唱された「スペクトル法の精度と有限要素法の一般性を融合した\footnote{``combines the generality of the finite element method with the accuracy of spectral techniques''~\cite{Patera1984}}」計算手法である~\cite{karniadakis2005spectral}．
 
 
 \section{三次元円柱座標系におけるスペクトル要素Fourier法}
 \label{sec:SpectralElementFourierMethod}
 
-本研究では三次元円柱座標系 \(\vb*{x} = (z,r,\theta)\) で
+本研究では三次元円柱座標系\(\vb*{x} = (z,r,\theta)\)で
 \begin{itemize}
-  \item 周方向（ \(\theta\) 方向）に一次元Fourierスペクトル法
-  \item 軸・半径方向（ \(z,r\) 方向）に二次元スペクトル要素法
+  \item 周方向（\(\theta\)方向）に一次元Fourierスペクトル法
+  \item 軸・半径方向（\(z,r\)方向）に二次元スペクトル要素法
 \end{itemize}
 を組み合わせたスペクトル要素Fourier法（spectral element-Fourier method）~\cite{Karniadakis1991,Blackburn2004}を実装した．
 
@@ -39,7 +39,7 @@
 
 \subsubsection{支配方程式の対角化}
 
-円柱座標系に起因する \(v_k, w_k\) の方程式の右辺に現れた余分な項を，対角化
+円柱座標系に起因する\(v_k, w_k\)の方程式の右辺に現れた余分な項を，対角化
 \begin{empheq}[left=\empheqlbrace]{align}
   \tilde{v}_k &= v_k +\mathrm{i} w_k \nonumber \\
   \tilde{w}_k &= v_k -\mathrm{i} w_k \nonumber \\
@@ -48,10 +48,14 @@
   \qty[\tilde{\vb*{N}} (\vb*{u})_\theta]_k &= \qty[\vb*{N} (\vb*{u})_r]_k -\mathrm{i} \qty[\vb*{N} (\vb*{u})_\theta]_k \nonumber
 \end{empheq}
 で消去する．
+\begin{tcolorbox}
+  ここでは4行だての数式にひとつだけ式番号をつけるため，1--2，4行目に\texttt{nonumber}コマンドを付加しているが，そのために式番号が3行目に表示されてしまっている（4行の真ん中ではない）．
+  いろいろなやり方があるようだが，\texttt{empheq}パッケージと相性の良い方法が見つけられていない．
+\end{tcolorbox}
 
 \subsubsection{支配方程式の対称化}
 
-対角化された支配方程式に存在する \(1/r^2\) に関する特異点を除去するために \(r\) を乗じ，対称化された支配方程式と非圧縮条件
+対角化された支配方程式に存在する\(1/r^2\)に関する特異点を除去するために\(r\)を乗じ，対称化された支配方程式と非圧縮条件
 \begin{empheq}[left=\empheqlbrace]{align}
   \pdv{r u_k}{t} + r \qty[\vb*{N} (\vb*{u})_z]_k &= - r\pdv{z} p_k + \frac{1}{\Re} \qty( \pdv{z} r \pdv{z} + \frac{1}{r} \pdv{r} r \pdv{r} - \frac{k^2}{r} ) u_k \nonumber \\
   \pdv{r \tilde{v}_k}{t} + r \qty[\tilde{\vb*{N}} (\vb*{u})_r]_k &= - \qty(r\pdv{r} - k) p_k + \frac{1}{\Re} \qty( \pdv{z} r \pdv{z} + \pdv{r} r \pdv{r} - \frac{(k+1)^2}{r} ) \tilde{v}_k \nonumber \\

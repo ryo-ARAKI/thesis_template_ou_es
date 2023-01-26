@@ -20,47 +20,50 @@
 % 一行あたり文字数と一ページあたり行数の指定
 \makeatletter
 \def\mojiparline#1{
-    \newcounter{mpl}
-    \setcounter{mpl}{#1}
-    \@tempdima=\linewidth
-    \advance\@tempdima by-\value{mpl}zw
-    \addtocounter{mpl}{-1}
-    \divide\@tempdima by \value{mpl}
-    \advance\kanjiskip by\@tempdima
-    \advance\parindent by\@tempdima
+  \newcounter{mpl}
+  \setcounter{mpl}{#1}
+  \@tempdima=\linewidth
+  \advance\@tempdima by-\value{mpl}zw
+  \addtocounter{mpl}{-1}
+  \divide\@tempdima by \value{mpl}
+  \advance\kanjiskip by\@tempdima
+  \advance\parindent by\@tempdima
 }
 \makeatother
 \def\linesparpage#1{
-    \baselineskip=\textheight
-    \divide\baselineskip by #1
+  \baselineskip=\textheight
+  \divide\baselineskip by #1
 }
 %
 % ===========================================
 % 図・表関係
 % ===========================================
-% \usepackage[draft]{graphicx}
 \usepackage{graphicx}
 \usepackage{wrapfig}  % 文章に囲まれた図の挿入
-\graphicspath{{../thesis/pics/}}  % \includegraphicsで参照するディレクトリ
-%これを \graphicspath{{../thesis/pics/}, {/path/to/figure/directory/}} のように書けば複数のディレクトリの画像を参照できる．
-\usepackage{setspace,caption}
-\captionsetup[figure]{font={stretch=0.8}}  % 図のキャプションのスペーシングを縮める
+\graphicspath{  % \includegraphicsで参照するディレクトリ
+  {../thesis/pics/}
+}
 %
 % ===========================================
 % 参考文献
 % ===========================================
+\usepackage[utf8]{inputenc} % Load 'inputenc' before biblatex.のWarningの回避．utf-8を使うためのパッケージ
 \usepackage[backend=biber,style=phys,biblabel=brackets,pageranges=false,maxbibnames=3,doi=false]{biblatex}
 \setlength\bibitemsep{0.0\baselineskip}
 \addbibresource{../bib_textbooks.bib}  % 教科書など
 \addbibresource{../bib_articles.bib}  % 論文など
-\AtEveryBibitem{\clearlist{language}}  % 文献の言語情報を出力しない
 %
 % ===========================================
 % 独自スタイルの導入
 % ===========================================
 \usepackage{../mystyle}
-\renewcommand{\figurename}{Fig.}
-\usepackage{bxjalipsum}
+\hypersetup{pdfborder={0 0 0}}  % hyperlinkの青枠線を表示しない
+\usepackage{setspace,caption} % Unknown document class (or package)のWarningの回避のためにmystyleのあとに書く
+\captionsetup[figure]{font={stretch=0.8}}  % 図のキャプションのスペーシングを縮める
+
+\renewcommand{\figurename}{図}
+\renewcommand{\tablename}{表}
+\usepackage{bxjalipsum}  % 日本語のダミー文章
 \DeclareSourcemap{
   % 論文のタイトルを非表示（mystyle.styで論文のタイトル表示からダブルクォーテーションを削除，という指示をしているのでここに書く）
   \maps[datatype=bibtex]{
@@ -70,13 +73,14 @@
     }
   }
 }
-%
-% ===========================================
-% 表紙の記述
-% ===========================================
-\title{\underline{title}}
-\author{name}
-\date{\today}
+
+\usepackage{csquotes} % 'babel/polyglossia' detected but 'csquotes' missing.のWarningの回避
+%%% Font shape `JY2/hmc/b/n' undefinedのWarningの回避
+\DeclareFontShape{JY2}{hmc}{b}{n}{<->ssub*hmc/bx/n}{}
+\DeclareFontShape{JT2}{hmc}{b}{n}{<->ssub*hmc/m/n}{}
+\DeclareFontShape{JY2}{hmc}{m}{it}{<->ssub*hmc/m/n}{}
+\DeclareFontShape{JT2}{hmc}{m}{it}{<->ssub*hmc/m/n}{}
+
 
 % +++++++++++++++++++++++++++++++++++++++++++
 % 本文
@@ -100,10 +104,10 @@
   \centering
   \includegraphics[width=10zw]{example-image-9x16}
   \caption{
-    Figure caption figure caption figure caption.
+    図のキャプション，図のキャプション．
   }
-  \label{fig:intruduction}
-  \vspace*{-\intextsep}
+  \label{fig:introduction}
+  \vspace*{-1.0zh} % 本文との間隔を調整するために\vspaceに適当な値（1zhは1行分，ptで指定もできる）を入れる
 \end{wrapfigure}
 
 \textcolor{LightGray}{
@@ -116,13 +120,13 @@
 % ===========================================
 
 \begin{wrapfigure}{r}{26zw}
-  \vspace*{-\intextsep}
+  \vspace*{-1.0zh} % 上に詰めて見出しの空白を有効活用する
   \centering
   \includegraphics[width=24zw]{example-image-16x9}
   \caption{
-    Figure caption figure caption figure caption figure caption figure caption figure caption figure caption.
+    図のキャプション，図のキャプション，図のキャプション，図のキャプション，図のキャプション．
   }
-  \label{fig:intruduction}
+  \label{fig:experiment}
   \vspace*{-\intextsep}
 \end{wrapfigure}
 
@@ -155,9 +159,10 @@
     \label{subfig:i}
   }
   \caption{
-    Figure caption figure caption figure caption figure caption figure caption figure caption figure caption figure caption figure caption figure caption.
+    図のキャプション，図のキャプション，図のキャプション，図のキャプション，図のキャプション，図のキャプション，図のキャプション．
   }
   \label{fig:fig_result}
+  \vspace*{1.0zh}
 \end{figure}
 
 \textcolor{LightGray}{
@@ -169,7 +174,7 @@
 \section{結言}
 % ===========================================
 
-私は，〇〇〇という問題に注目し~\cite{Goto2017a,GotoJPS2018}，〜〜〜を明らかにした~\cite{Araki_master_thesis}．
+私は，〇〇〇という問題に注目し~\cite{Goto2017a,GotoJPS2018}，図~\ref{fig:fig_result}のように〜〜〜を明らかにした~\cite{Araki_master_thesis}．
 
 % ===========================================
 \printbibliography[title=参考文献]

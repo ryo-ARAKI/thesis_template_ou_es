@@ -1,7 +1,7 @@
 \chapter{粒子画像流速測定による室内実験}
 \label{chap:Experiment}
 
-本章では，閉じた系の乱流を粒子画像流速測定（PIV）実験で測定した結果を報告する．
+本章では，閉じた系の乱流を粒子画像流速測定（Particle Image Velocimetry，PIV）実験で測定した結果を報告する．
 \ref{sec:ExperimentalSetup}節で実験装置の諸元についてまとめる．
 
 
@@ -17,6 +17,11 @@
   }
   \label{fig:experiment_schematic}
 \end{figure}
+\begin{tcolorbox}
+  例えば現時点では作っていない図を将来的に追加したい場合，このようなダミー図を用いると良い．
+  これ以外にもさまざまなアスペクト比の図が用意されている（\texttt{mwe}パッケージのドキュメントを参照せよ）．
+\end{tcolorbox}
+
 
 \begin{table}[!t]
   \centering
@@ -36,17 +41,24 @@
   \end{tabular}
   \label{table:ListofEquipment}
 \end{table}
+\begin{tcolorbox}
+  表に罫線は少ないほうがよい．
+  とくに表全体を囲むような罫線は無いほうがきれいに表示される（と思う）．
+\end{tcolorbox}
 
 
 \subsection{系の無次元化}
 \label{subsec:ES_UndimentionalizedSystem}
 
-円盤の半径\(D/2\, \si{m}\)と回転円盤の外周速度\(U\, \si{m/s}\)より，Reynolds数
+円盤の半径\(D/2\, \si{m}\)と回転円盤の外周速度\(U\, \si{m/s}\)よりReynolds数
 \begin{equation}
   \Re \equiv \frac{UD/2}{\nu}
   \label{eq:ES_DefOfReynoldsNumber}
 \end{equation}
 を定義する．
+\begin{tcolorbox}
+  単位付きの数値を記述する場合，上記のように\texttt{siunitx}パッケージを用いる．
+\end{tcolorbox}
 ただし，外周速度\(U\)は円盤の回転周期\(T\, \si{s}\)と半径\(D/2\)をもちいて
 \begin{equation}
   U \equiv \frac{2\pi D/2}{T}

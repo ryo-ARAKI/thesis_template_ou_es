@@ -19,12 +19,17 @@
 % 図・表関係
 % ===========================================
 \usepackage{graphicx}
-\graphicspath{{./pics/}}  % \includegraphicsで参照するディレクトリ
-%これを \graphicspath{{./pics/}, {/path/to/figure/directory/}} のように書けば複数のディレクトリの画像を参照できる．
+\graphicspath{  % \includegraphicsで参照するディレクトリ
+  {./pics/}
+}
+% {/path/to/figure/directory/} のように画像が保存されているディレクトリを追加すれば，いちいち画像をコピーせずに読み込める
+% 異なるPCで書き進める場合やクラウドサービスで執筆する場合はすべての画像を `./pics' に入れておくこと．
+\usepackage{tikz}
 %
 % ===========================================
 % 参考文献
 % ===========================================
+\usepackage[utf8]{inputenc} % Load 'inputenc' before biblatex.のWarningの回避．utf-8を使うためのパッケージ
 \usepackage[
   backend=biber,  % 文献ソートを担当（登場順なので不要？）
   style=phys,  % AIPとAPSのスタイル
@@ -50,10 +55,21 @@
 % 独自スタイルの定義
 % ===========================================
 \usepackage{../mystyle}
+\hypersetup{pdfborder={0 0 0}}  % hyperlinkの青枠線を表示しない
+\renewcommand\UrlFont{\rmfamily} % urlのフォントを指定
 \usepackage[english]{babel}  % arabic数字でページ番号を指定
 \renewcommand{\thefootnote}{\fnsymbol{footnote}}
 \usepackage{lipsum}  % ダミー文章
 \usepackage{bxjalipsum}  % 日本語のダミー文章
+
+\usepackage{csquotes} % 'babel/polyglossia' detected but 'csquotes' missing.のWarningの回避
+%%% Font shape `JY2/hmc/b/n' undefinedなどのVS CodeのWarningの回避
+\DeclareFontShape{JY2}{hmc}{b}{n}{<->ssub*hmc/bx/n}{}
+\DeclareFontShape{JT2}{hmc}{b}{n}{<->ssub*hmc/m/n}{}
+\DeclareFontShape{JY2}{hmc}{m}{it}{<->ssub*hmc/m/n}{}
+\DeclareFontShape{JT2}{hmc}{m}{it}{<->ssub*hmc/m/n}{}
+\DeclareFontShape{JY2}{hgt}{m}{it}{<->ssub*hgt/m/n}{}
+\DeclareFontShape{JT2}{hgt}{m}{it}{<->ssub*hgt/m/n}{}
 %
 % ===========================================
 % 表紙の記述
@@ -68,12 +84,12 @@
 \begin{document}
 \maketitle
 
-% % ===========================================
-% % 概要（英語） *****修士論文のみ（卒論は緒言）*****
-% % ===========================================
-% \pagenumbering{roman}
-% \input{./text/abstract.tex}
-% \clearpage
+\pagenumbering{roman}
+% ===========================================
+% 概要（英語） *****修士論文のみ（卒論は緒言）*****
+% ===========================================
+\input{./text/abstract.tex}
+\clearpage
 
 % % ===========================================
 % % 目次
@@ -96,11 +112,11 @@
 % \renewcommand{\prechaptername}{第}
 % \renewcommand{\postchaptername}{章}
 
-% % ===========================================
-% % 緒言 *****卒業論文のみ？（修論は英語概要）*****
-% % ===========================================
-% \pagenumbering{arabic}  % 以降算用数字でページ番号を記述
-% % \input{./text/chap1_introduction.tex}
+\pagenumbering{arabic}  % 以降算用数字でページ番号を記述
+% ===========================================
+% 緒言 *****卒業論文のみ（修論は英語概要）*****
+% ===========================================
+% \input{./text/chap1_introduction.tex}
 
 % % ===========================================
 % % 研究背景

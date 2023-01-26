@@ -1,0 +1,580 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{tennekes1972first}{book}{}
+      \name{author}{2}{}{%
+        {{hash=6e7a118e284ebd66fbabc0c8f4bec594}{%
+           family={Tennekes},
+           familyi={T\bibinitperiod},
+           given={Hendrik},
+           giveni={H\bibinitperiod}}}%
+        {{hash=be8ece05a80e0b10446f677855380ff9}{%
+           family={Lumley},
+           familyi={L\bibinitperiod},
+           given={John\bibnamedelima L.},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {MIT Press}%
+      }
+      \strng{namehash}{4c11ca254b6a58146b62d2d8ee3c9247}
+      \strng{fullhash}{4c11ca254b6a58146b62d2d8ee3c9247}
+      \strng{bibnamehash}{4c11ca254b6a58146b62d2d8ee3c9247}
+      \strng{authorbibnamehash}{4c11ca254b6a58146b62d2d8ee3c9247}
+      \strng{authornamehash}{4c11ca254b6a58146b62d2d8ee3c9247}
+      \strng{authorfullhash}{4c11ca254b6a58146b62d2d8ee3c9247}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{A} {F}irst {C}ourse in {T}urbulence}
+      \field{year}{1972}
+    \endentry
+    \entry{Landau1987Fluid}{book}{}
+      \name{author}{2}{}{%
+        {{hash=ab77fc1405f1025268c1fed8c4fe3104}{%
+           family={Landau},
+           familyi={L\bibinitperiod},
+           given={L.\bibnamedelimi D.},
+           giveni={L\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=1e5737ddc6200d0118261e7bc577ab25}{%
+           family={Lifshitz},
+           familyi={L\bibinitperiod},
+           given={E.\bibnamedelimi M.},
+           giveni={E\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Butterworth-Heinemann}%
+      }
+      \strng{namehash}{0c0920d244a4ef518dc023815875721c}
+      \strng{fullhash}{0c0920d244a4ef518dc023815875721c}
+      \strng{bibnamehash}{0c0920d244a4ef518dc023815875721c}
+      \strng{authorbibnamehash}{0c0920d244a4ef518dc023815875721c}
+      \strng{authornamehash}{0c0920d244a4ef518dc023815875721c}
+      \strng{authorfullhash}{0c0920d244a4ef518dc023815875721c}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2}
+      \field{howpublished}{Paperback}
+      \field{isbn}{0750627670}
+      \field{month}{1}
+      \field{series}{Course of theoretical physics / by L. D. Landau and E. M. Lifshitz, Vol. 6}
+      \field{title}{Fluid Mechanics, Second Edition: Volume 6 (Course of Theoretical Physics)}
+      \field{year}{1987}
+      \verb{urlraw}
+      \verb http://www.worldcat.org/isbn/0750627670
+      \endverb
+      \verb{url}
+      \verb http://www.worldcat.org/isbn/0750627670
+      \endverb
+      \keyw{book}
+    \endentry
+    \entry{KidaYanase}{book}{}
+      \name{author}{2}{}{%
+        {{hash=137b9564b00452f425b80539faf33745}{%
+           family={木田},
+           familyi={木\bibinitperiod},
+           given={重雄},
+           giveni={重\bibinitperiod}}}%
+        {{hash=cef35690d64549044825ed2fd6ed1d5f}{%
+           family={柳瀬},
+           familyi={柳\bibinitperiod},
+           given={眞一郎},
+           giveni={眞\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {朝倉書店}%
+      }
+      \strng{namehash}{cc63c3d982ebdce6b946064e41484d14}
+      \strng{fullhash}{cc63c3d982ebdce6b946064e41484d14}
+      \strng{bibnamehash}{cc63c3d982ebdce6b946064e41484d14}
+      \strng{authorbibnamehash}{cc63c3d982ebdce6b946064e41484d14}
+      \strng{authornamehash}{cc63c3d982ebdce6b946064e41484d14}
+      \strng{authorfullhash}{cc63c3d982ebdce6b946064e41484d14}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{Japanese}
+      \field{title}{乱流力学}
+      \field{year}{1999}
+    \endentry
+    \entry{frisch1995tlk}{book}{}
+      \name{author}{1}{}{%
+        {{hash=af5752086aca103e7fa36d654ba6d4a8}{%
+           family={Frisch},
+           familyi={F\bibinitperiod},
+           given={Uriel},
+           giveni={U\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{af5752086aca103e7fa36d654ba6d4a8}
+      \strng{fullhash}{af5752086aca103e7fa36d654ba6d4a8}
+      \strng{bibnamehash}{af5752086aca103e7fa36d654ba6d4a8}
+      \strng{authorbibnamehash}{af5752086aca103e7fa36d654ba6d4a8}
+      \strng{authornamehash}{af5752086aca103e7fa36d654ba6d4a8}
+      \strng{authorfullhash}{af5752086aca103e7fa36d654ba6d4a8}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Turbulence: {T}he {L}egacy of {A}. {N}. {K}olmogorov}
+      \field{year}{1995}
+    \endentry
+    \entry{Tatsumi}{book}{}
+      \name{author}{1}{}{%
+        {{hash=1036573bc6a27b96c6710ce3da54649a}{%
+           family={巽},
+           familyi={巽\bibinitperiod},
+           given={友正},
+           giveni={友\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {培風館}%
+      }
+      \strng{namehash}{1036573bc6a27b96c6710ce3da54649a}
+      \strng{fullhash}{1036573bc6a27b96c6710ce3da54649a}
+      \strng{bibnamehash}{1036573bc6a27b96c6710ce3da54649a}
+      \strng{authorbibnamehash}{1036573bc6a27b96c6710ce3da54649a}
+      \strng{authornamehash}{1036573bc6a27b96c6710ce3da54649a}
+      \strng{authorfullhash}{1036573bc6a27b96c6710ce3da54649a}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9784563024215}
+      \field{langid}{Japanese}
+      \field{series}{新物理学シリーズ}
+      \field{title}{流体力学}
+      \field{year}{1982}
+      \verb{urlraw}
+      \verb https://books.google.co.jp/books?id=K2T7AAAACAAJ
+      \endverb
+      \verb{url}
+      \verb https://books.google.co.jp/books?id=K2T7AAAACAAJ
+      \endverb
+    \endentry
+    \entry{Goto2017a}{article}{}
+      \name{author}{3}{}{%
+        {{hash=48a0595aea8e691ed3e8261a79e07c62}{%
+           family={Goto},
+           familyi={G\bibinitperiod},
+           given={Susumu},
+           giveni={S\bibinitperiod}}}%
+        {{hash=61488219129e8b05cdf12b2acf947e75}{%
+           family={Saito},
+           familyi={S\bibinitperiod},
+           given={Yuta},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=17c9608214e77e31fef469e579cb28e2}{%
+           family={Kawahara},
+           familyi={K\bibinitperiod},
+           given={Genta},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{bdf153bb7f6e55e140c762e58511215e}
+      \strng{fullhash}{b944131388428fb3ba945872fd7d7bb3}
+      \strng{bibnamehash}{b944131388428fb3ba945872fd7d7bb3}
+      \strng{authorbibnamehash}{b944131388428fb3ba945872fd7d7bb3}
+      \strng{authornamehash}{bdf153bb7f6e55e140c762e58511215e}
+      \strng{authorfullhash}{b944131388428fb3ba945872fd7d7bb3}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{To draw a precise picture of the hierarchy of coherent vortices in spatially periodic turbulence at high Reynolds numbers and to understand its generation mechanism, we conduct direct numerical simulations of turbulence in a periodic cube. By objectively identifying the axes of vortex tubes at various length scales in the inertial range, we quantitatively show that the sustained turbulence consists of a hierarchy of antiparallel pairs of vortex tubes. These vortex tubes are created by being stretched in strain fields around 2-8 times larger vortices, whereas they are weakened by strain around half-scale vortices. Temporal tracking of identified vortex tubes shows that they tend to form antiparallel pairs from the moment they are created. We examine three different external forces to show that the hierarchical structure of antiparallel vortex pairs is robust and its statistical features in inertial length scales are independent of the force. The turbulence that is sustained by steady forces is quasiperiodic in time and its significant temporal fluctuations are caused by successive creation of strong vortex tubes within the hierarchy.}
+      \field{issn}{2469990X}
+      \field{journaltitle}{Phys. Rev. Fluids}
+      \field{number}{6}
+      \field{title}{Hierarchy of antiparallel vortex tubes in spatially periodic turbulence at high {R}eynolds numbers}
+      \field{volume}{2}
+      \field{year}{2017}
+      \field{pages}{64603}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/PhysRevFluids.2.064603
+      \endverb
+      \verb{file}
+      \verb :home/ryo/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Goto, Saito, Kawahara - 2017 - Hierarchy of antiparallel vortex tubes in spatially periodic turbulence at high Reynolds numbers.pdf:pdf
+      \endverb
+    \endentry
+    \entry{GotoJPS2018}{article}{}
+      \name{author}{1}{}{%
+        {{hash=23283ace58d3e934149e068e013bd217}{%
+           family={後藤},
+           familyi={後\bibinitperiod},
+           given={晋},
+           giveni={晋\bibinitperiod}}}%
+      }
+      \strng{namehash}{23283ace58d3e934149e068e013bd217}
+      \strng{fullhash}{23283ace58d3e934149e068e013bd217}
+      \strng{bibnamehash}{23283ace58d3e934149e068e013bd217}
+      \strng{authorbibnamehash}{23283ace58d3e934149e068e013bd217}
+      \strng{authornamehash}{23283ace58d3e934149e068e013bd217}
+      \strng{authorfullhash}{23283ace58d3e934149e068e013bd217}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{日本物理学会誌}
+      \field{langid}{Japanese}
+      \field{number}{7}
+      \field{title}{発達した乱流―エネルギーカスケードをめぐって}
+      \field{volume}{73}
+      \field{year}{2018}
+      \field{pages}{457\bibrangedash 462}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.11316/butsuri.73.7_457
+      \endverb
+    \endentry
+    \entry{gotolab}{online}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labeltitlesource}{title}
+      \field{langid}{Japanese}
+      \field{title}{大阪大学基礎工学研究科~後藤研究室}
+      \field{urlday}{30}
+      \field{urlmonth}{1}
+      \field{urlyear}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb http://fm.me.es.osaka-u.ac.jp/index.html
+      \endverb
+      \verb{url}
+      \verb http://fm.me.es.osaka-u.ac.jp/index.html
+      \endverb
+    \endentry
+    \entry{Ishioka_spectral}{book}{}
+      \name{author}{1}{}{%
+        {{hash=4d3dd6afa26d3169e2fe840417c49014}{%
+           family={石岡},
+           familyi={石\bibinitperiod},
+           given={圭一},
+           giveni={圭\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {東京大学出版会}%
+      }
+      \strng{namehash}{4d3dd6afa26d3169e2fe840417c49014}
+      \strng{fullhash}{4d3dd6afa26d3169e2fe840417c49014}
+      \strng{bibnamehash}{4d3dd6afa26d3169e2fe840417c49014}
+      \strng{authorbibnamehash}{4d3dd6afa26d3169e2fe840417c49014}
+      \strng{authornamehash}{4d3dd6afa26d3169e2fe840417c49014}
+      \strng{authorfullhash}{4d3dd6afa26d3169e2fe840417c49014}
+      \field{sortinit}{5}
+      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9784130613057}
+      \field{langid}{Japanese}
+      \field{title}{スペクトル法による数値計算入門}
+      \field{year}{2004}
+    \endentry
+    \entry{Kajishima_turbulence_simulation}{book}{}
+      \name{author}{1}{}{%
+        {{hash=4e55811110a5c9fc2f5aec30374f816e}{%
+           family={梶島},
+           familyi={梶\bibinitperiod},
+           given={岳夫},
+           giveni={岳\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {養賢堂}%
+      }
+      \strng{namehash}{4e55811110a5c9fc2f5aec30374f816e}
+      \strng{fullhash}{4e55811110a5c9fc2f5aec30374f816e}
+      \strng{bibnamehash}{4e55811110a5c9fc2f5aec30374f816e}
+      \strng{authorbibnamehash}{4e55811110a5c9fc2f5aec30374f816e}
+      \strng{authornamehash}{4e55811110a5c9fc2f5aec30374f816e}
+      \strng{authorfullhash}{4e55811110a5c9fc2f5aec30374f816e}
+      \field{sortinit}{6}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{Japanese}
+      \field{title}{乱流の数値シミュレーション}
+      \field{year}{1999}
+    \endentry
+    \entry{1994fem_mathematics}{book}{}
+      \name{author}{1}{}{%
+        {{hash=d9dea6a11255e0060c6325c16f1e6669}{%
+           family={菊地},
+           familyi={菊\bibinitperiod},
+           given={文雄},
+           giveni={文\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {培風館}%
+      }
+      \strng{namehash}{d9dea6a11255e0060c6325c16f1e6669}
+      \strng{fullhash}{d9dea6a11255e0060c6325c16f1e6669}
+      \strng{bibnamehash}{d9dea6a11255e0060c6325c16f1e6669}
+      \strng{authorbibnamehash}{d9dea6a11255e0060c6325c16f1e6669}
+      \strng{authornamehash}{d9dea6a11255e0060c6325c16f1e6669}
+      \strng{authorfullhash}{d9dea6a11255e0060c6325c16f1e6669}
+      \field{sortinit}{7}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9784563033880}
+      \field{langid}{Japanese}
+      \field{series}{計算力学とCAEシリーズ 13}
+      \field{title}{有限要素法の数理: 数学的基礎と誤差解析}
+      \field{year}{1994}
+      \verb{urlraw}
+      \verb https://books.google.fr/books?id=eyWoAAAACAAJ
+      \endverb
+      \verb{url}
+      \verb https://books.google.fr/books?id=eyWoAAAACAAJ
+      \endverb
+    \endentry
+    \entry{Patera1984}{article}{}
+      \name{author}{1}{}{%
+        {{hash=1490b520da9a378c2cc19b6bd5b5b6ce}{%
+           family={Patera},
+           familyi={P\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{1490b520da9a378c2cc19b6bd5b5b6ce}
+      \strng{fullhash}{1490b520da9a378c2cc19b6bd5b5b6ce}
+      \strng{bibnamehash}{1490b520da9a378c2cc19b6bd5b5b6ce}
+      \strng{authorbibnamehash}{1490b520da9a378c2cc19b6bd5b5b6ce}
+      \strng{authornamehash}{1490b520da9a378c2cc19b6bd5b5b6ce}
+      \strng{authorfullhash}{1490b520da9a378c2cc19b6bd5b5b6ce}
+      \field{sortinit}{8}
+      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A spectral element method that combines the generality of the finite element method with the accuracy of spectral techniques is proposed for the numerical solution of the incompressible Navier-Stokes equations. In the spectral element discretization, the computational domain is broken into a series of elements, and the velocity in each element is represented as a high-order Lagrangian interpolant through Chebyshev collocation points. The hyperbolic piece of the governing equations is then treated with an explicit collocation scheme, while the pressure and viscous contributions are treated implicitly with a projection operator derived from a variational principle. The implementation of the technique is demonstrated on a one-dimensional inflow-outflow advection-diffusion equation, and the method is then applied to laminar two-dimensional (separated) flow in a channel expansion. Comparisons are made with experiment and previous numerical work. ?? 1984.}
+      \field{isbn}{0021-9991}
+      \field{issn}{10902716}
+      \field{journaltitle}{J. Comput. Phys.}
+      \field{number}{3}
+      \field{title}{A spectral element method for fluid dynamics: {L}aminar flow in a channel expansion}
+      \field{volume}{54}
+      \field{year}{1984}
+      \field{pages}{468\bibrangedash 488}
+      \range{pages}{21}
+      \verb{doi}
+      \verb 10.1016/0021-9991(84)90128-1
+      \endverb
+      \verb{file}
+      \verb :home/ryo/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Patera - 1984 - A spectral element method for fluid dynamics Laminar flow in a channel expansion.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://ac.els-cdn.com/0021999184901281/1-s2.0-0021999184901281-main.pdf?{\_}tid=c861f39a-705c-11e7-b6f4-00000aab0f01{\&}acdnat=1500893126{\_}2be4030a1c29ba0916851d10afed7056
+      \endverb
+      \verb{url}
+      \verb http://ac.els-cdn.com/0021999184901281/1-s2.0-0021999184901281-main.pdf?%7B%5C_%7Dtid=c861f39a-705c-11e7-b6f4-00000aab0f01%7B%5C&%7Dacdnat=1500893126%7B%5C_%7D2be4030a1c29ba0916851d10afed7056
+      \endverb
+    \endentry
+    \entry{karniadakis2005spectral}{book}{}
+      \name{author}{2}{}{%
+        {{hash=df3d19ec0cfa8a16459883ca69b1e381}{%
+           family={Karniadakis},
+           familyi={K\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=84e4e1588a6a2f5e2c3901cd855391a2}{%
+           family={Sherwin},
+           familyi={S\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {OUP Oxford}%
+      }
+      \strng{namehash}{1ebac8d52b595c8ffb6069891429b429}
+      \strng{fullhash}{1ebac8d52b595c8ffb6069891429b429}
+      \strng{bibnamehash}{1ebac8d52b595c8ffb6069891429b429}
+      \strng{authorbibnamehash}{1ebac8d52b595c8ffb6069891429b429}
+      \strng{authornamehash}{1ebac8d52b595c8ffb6069891429b429}
+      \strng{authorfullhash}{1ebac8d52b595c8ffb6069891429b429}
+      \field{sortinit}{9}
+      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2}
+      \field{isbn}{9780198528692}
+      \field{series}{Numerical Mathematics and Scientific Computation}
+      \field{title}{Spectral/hp {E}lement {M}ethods for {C}omputational {F}luid {D}ynamics}
+      \field{year}{2005}
+      \verb{urlraw}
+      \verb https://books.google.fr/books?id=mfpzYY4KsuwC
+      \endverb
+      \verb{url}
+      \verb https://books.google.fr/books?id=mfpzYY4KsuwC
+      \endverb
+    \endentry
+    \entry{Karniadakis1991}{article}{}
+      \name{author}{3}{}{%
+        {{hash=1c2f5930e36485e8d38a87746769fdcc}{%
+           family={Karniadakis},
+           familyi={K\bibinitperiod},
+           given={G\bibnamedelima E},
+           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=5c7fe0440116bed827903e820a244ad1}{%
+           family={Israeli},
+           familyi={I\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=3629d7995f9a57455f99555954f0d084}{%
+           family={Orszag},
+           familyi={O\bibinitperiod},
+           given={Steven\bibnamedelima A},
+           giveni={S\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{8e75e7575e5a7eb654715b16a0d17189}
+      \strng{fullhash}{5aa32cfc2acf429ed073877a91f1df53}
+      \strng{bibnamehash}{5aa32cfc2acf429ed073877a91f1df53}
+      \strng{authorbibnamehash}{5aa32cfc2acf429ed073877a91f1df53}
+      \strng{authornamehash}{8e75e7575e5a7eb654715b16a0d17189}
+      \strng{authorfullhash}{5aa32cfc2acf429ed073877a91f1df53}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A new pressure formulation for splitting methods is developed that results in high-order time-accurate schemes for the solution of the incompressible Navier-Stokes equations. In particular, improved pressure boundary conditions of high order in time are introduced that minimize the effect of erroneous numerical boundary layers induced by splitting methods. A new family of stiffly stable schemes is employe d in mixed explicit/implicit time-intgration rules. These schemes exhibit much broader stability regions as compared to Adams-family schemes, typically used in splitting methods. Their stability properties rema in almost constant as the accuracy of the integration increases, so that robust third- or higher-order ti me-accurate schemes can readily be constructed that remain stable at relatively large CFL number. The new schemes are implemented within the framework of spectral element discretizations in space so that flexib ility and accuracy is guaranteed in the numerical experimentation. A model Stokes problem is studied in d etail, and several examples of Navier-Stokes solutions of flows in complex geometries are reported. Compa rison is made with the previously used first-order in time spectral element splitting and non-splitting ( e.g., Uzawa) schemes. High-order splitting/spectral element methods combine accuracy in space and time, a nd flexibility in geometry, and thus can be very efficient in direct simulations of turbulent flows in co mplex geometries.}
+      \field{issn}{00219991}
+      \field{journaltitle}{J. Comput. Phys.}
+      \field{number}{2}
+      \field{title}{High-Order Splitting Methods for the Incompressible {N}avier-{S}tokes Equations}
+      \field{volume}{97}
+      \field{year}{1991}
+      \field{pages}{414\bibrangedash 443}
+      \range{pages}{30}
+      \verb{doi}
+      \verb 10.1016/0021-9991(91)90007-8
+      \endverb
+      \verb{file}
+      \verb :home/ryo/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Karniadakis, Israeli, Orszag - 1991 - High-Order Splitting Methods for the Incompressible Navier-Stokes Equations.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://ac.els-cdn.com/0021999191900078/1-s2.0-0021999191900078-main.pdf?{\_}tid=e37a618a-705c-11e7-b6c1-00000aab0f27{\&}acdnat=1500893171{\_}0b52a52b3c558562702606f320fed37d http://dx.doi.org/10.1016/0021-9991(91)90007-8
+      \endverb
+      \verb{url}
+      \verb http://ac.els-cdn.com/0021999191900078/1-s2.0-0021999191900078-main.pdf?%7B%5C_%7Dtid=e37a618a-705c-11e7-b6c1-00000aab0f27%7B%5C&%7Dacdnat=1500893171%7B%5C_%7D0b52a52b3c558562702606f320fed37d%20http://dx.doi.org/10.1016/0021-9991(91)90007-8
+      \endverb
+    \endentry
+    \entry{Blackburn2004}{article}{}
+      \name{author}{2}{}{%
+        {{hash=fa63420546d3a0fd4861e1a364867b87}{%
+           family={Blackburn},
+           familyi={B\bibinitperiod},
+           given={Hugh\bibnamedelima M.},
+           giveni={H\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=c7769d92fa26fb5e71e6ab162274e680}{%
+           family={Sherwin},
+           familyi={S\bibinitperiod},
+           given={Spencer\bibnamedelima J},
+           giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{4393da7755a90304cb2a419e7f972a89}
+      \strng{fullhash}{4393da7755a90304cb2a419e7f972a89}
+      \strng{bibnamehash}{4393da7755a90304cb2a419e7f972a89}
+      \strng{authorbibnamehash}{4393da7755a90304cb2a419e7f972a89}
+      \strng{authornamehash}{4393da7755a90304cb2a419e7f972a89}
+      \strng{authorfullhash}{4393da7755a90304cb2a419e7f972a89}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A primitive-variable formulation for simulation of time-dependent incompressible flows in cylindrical coordinates is developed. Spectral elements are used to discretise the meridional semi-plane, coupled with Fourier expansions in azimuth. Unlike previous formulations where special distributions of nodal points have been used in the radial direction, the current work adopts standard Gauss-Lobatto-Legendre nodal-based expansions in both the radial and axial directions. Using a Galerkin projection of the symmetrised cylindrical Navier-Stokes equations, all geometric singularities are removed as a consequence of either the Fourier-mode dependence of axial boundary conditions or the shape of the weight function applied in the Galerkin projection. This observation implies that in a numerical implementation, geometrically singular terms can be naively treated by explicitly zeroing their contributions on the axis in integral expressions without recourse to special treatments such as l'Hopital's rule. Exponential convergence of the method both in the meridional semi-plane and in azimuth is demonstrated through application to a three-dimensional analytical solution of the Navier-Stokes equations in which flow crosses the axis.}
+      \field{isbn}{00219991}
+      \field{issn}{00219991}
+      \field{journaltitle}{J. Comput. Phys.}
+      \field{number}{2}
+      \field{title}{Formulation of a {G}alerkin spectral element-{F}ourier method for three-dimensional incompressible flows in cylindrical geometries}
+      \field{volume}{197}
+      \field{year}{2004}
+      \field{pages}{759\bibrangedash 778}
+      \range{pages}{20}
+      \verb{doi}
+      \verb 10.1016/j.jcp.2004.02.013
+      \endverb
+      \verb{file}
+      \verb :home/ryo/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Blackburn, Sherwin - 2004 - Formulation of a Galerkin spectral element-Fourier method for three-dimensional incompressible flows in cyli.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://ac.els-cdn.com/S0021999104000907/1-s2.0-S0021999104000907-main.pdf?{\_}tid=0d74ec8a-705d-11e7-9cef-00000aab0f01{\&}acdnat=1500893242{\_}8d87d1f74122d3618f7eee5259bda1c7
+      \endverb
+      \verb{url}
+      \verb http://ac.els-cdn.com/S0021999104000907/1-s2.0-S0021999104000907-main.pdf?%7B%5C_%7Dtid=0d74ec8a-705d-11e7-9cef-00000aab0f01%7B%5C&%7Dacdnat=1500893242%7B%5C_%7D8d87d1f74122d3618f7eee5259bda1c7
+      \endverb
+      \keyw{Cylindrical coordinates,Incompressible flow,Spectral element}
+    \endentry
+    \entry{Araki_master_thesis}{article}{}
+      \name{author}{1}{}{%
+        {{hash=674f14845d038731ce31f23c8f07cf75}{%
+           family={荒木},
+           familyi={荒\bibinitperiod},
+           given={亮},
+           giveni={亮\bibinitperiod}}}%
+      }
+      \strng{namehash}{674f14845d038731ce31f23c8f07cf75}
+      \strng{fullhash}{674f14845d038731ce31f23c8f07cf75}
+      \strng{bibnamehash}{674f14845d038731ce31f23c8f07cf75}
+      \strng{authorbibnamehash}{674f14845d038731ce31f23c8f07cf75}
+      \strng{authornamehash}{674f14845d038731ce31f23c8f07cf75}
+      \strng{authorfullhash}{674f14845d038731ce31f23c8f07cf75}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{大阪大学基礎工学研究科 修士論文}
+      \field{langid}{Japanese}
+      \field{title}{von K\'{a}rm\'{a}n乱流の時空間大変動とエネルギカスケードの動力学}
+      \field{year}{2020}
+    \endentry
+    \entry{PIVhandbook}{book}{}
+      \name{author}{1}{}{%
+        {{hash=9e4228d1a8e3ab04e2a2cd54ef932c2b}{%
+           family={可視化情報学会},
+           familyi={可\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {森北出版}%
+      }
+      \strng{namehash}{9e4228d1a8e3ab04e2a2cd54ef932c2b}
+      \strng{fullhash}{9e4228d1a8e3ab04e2a2cd54ef932c2b}
+      \strng{bibnamehash}{9e4228d1a8e3ab04e2a2cd54ef932c2b}
+      \strng{authorbibnamehash}{9e4228d1a8e3ab04e2a2cd54ef932c2b}
+      \strng{authornamehash}{9e4228d1a8e3ab04e2a2cd54ef932c2b}
+      \strng{authorfullhash}{9e4228d1a8e3ab04e2a2cd54ef932c2b}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{第2版}
+      \field{langid}{Japanese}
+      \field{title}{{PIV}ハンドブック}
+      \field{year}{2018}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

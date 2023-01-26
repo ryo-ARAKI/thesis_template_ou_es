@@ -7,7 +7,6 @@
 % フォント設定
 % ===========================================
 \usepackage{hyperref}  % 図・表・参考文献へのリンク
-\usepackage[utf8]{inputenc} % utf-8を使うためのパッケージ
 \usepackage{indentfirst}
 \usepackage{times} % Use the times font
 % \usepackage{palatino} % Uncomment to use the Palatino font
@@ -16,12 +15,27 @@
 % ===========================================
 % 図・表関係
 % ===========================================
+%%% Unknown document class (or package), (caption)のWarningの回避
+\setlength\abovecaptionskip{\f@size\p@}
+\setlength\belowcaptionskip{0\p@}
+\long\def\@makecaption#1#2{%
+  \vskip\abovecaptionskip
+  \sbox\@tempboxa{#1: #2}%
+  \ifdim \wd\@tempboxa >\hsize
+    #1: #2\par
+  \else
+    \global \@minipagefalse
+    \hb@xt@\hsize{\hfil\box\@tempboxa\hfil}%
+  \fi
+  \vskip\belowcaptionskip}
+%%%
 \usepackage{here}
 \usepackage{xcolor} % Specify colors by their 'svgnames', for a full list of all colors available see here: http://www.latextemplates.com/svgnames-colors
 \usepackage{booktabs} % 表の横罫線
 \usepackage{lscape}  % 表などを90度回転させる
 \usepackage{longtable} % ページをまたぐ表の作成
 \usepackage{subfig}
+\usepackage{tcolorbox}
 %
 % ===========================================
 % 数学記号
@@ -39,51 +53,52 @@
   }}%
 % mathematical environment
 \usepackage{amsthm}
-\theoremstyle{assumption}
+% \theoremstyle{assumption}
+\theoremstyle{plain} % Unknown theoremstyle `assumption'.のWarningの回避
 \newtheorem*{assumption}{Assumption}
 %
 % ===========================================
 % 参考文献のスタイルを独自定義
 % ===========================================
 \renewbibmacro{in:}{} % in: Some journal の "in:" を取る
-\DeclareFieldFormat[article]{title}{#1}  % 論文タイトルにダブルクォートをつけない
-\DeclareFieldFormat[inbook]{title}{\mkbibitalic{#1}}  % 書籍のタイトルを斜体
+\DeclareFieldFormat[article, online]{title}{#1}  % 論文タイトルにダブルクォートをつけない/online文献のフォントを他と揃える
+\DeclareFieldFormat[inbook, book]{title}{\mkbibitalic{#1}}  % 書籍のタイトルを斜体
 \DeclareSourcemap{%
   \maps[datatype=bibtex,overwrite=true]{
     % 雑誌名の短縮形．自分でリストを作る必要がある
     \map{
       \step[
         fieldsource=journal,
-        match={Annual Review of Fluid Mechanics},
-        replace={Annu. Rev. Fluid Mech.}]%
-      \step[
-        fieldsource=journal,
         match={Journal of Fluid Mechanics},
         replace={J. Fluid Mech.}]%
-      \step[
-        fieldsource=journal,
-        match={Physical Review Letters},
-        replace={Phys. Rev. Lett.}]%
       \step[
         fieldsource=journal,
         match={Physical Review E},
         replace={Phys. Rev. E}]%
       \step[
         fieldsource=journal,
+        match={Physical Review X},
+        replace={Phys. Rev. X}]%
+      \step[
+        fieldsource=journal,
+        match={Physical Review Letters},
+        replace={Phys. Rev. Lett.}]%
+      \step[
+        fieldsource=journal,
         match={Physical Review Fluids},
         replace={Phys. Rev. Fluids}]%
       \step[
         fieldsource=journal,
-        match={Physica D: Nonlinear Phenomena},
-        replace={Physica D}]%
+        match={Physical Review Research},
+        replace={Phys. Rev. Res.}]%
       \step[
         fieldsource=journal,
-        match={New Journal of Physics},
-        replace={New J. Phys.}]%
+        match={Annual Review of Fluid Mechanics},
+        replace={Annu. Rev. Fluid Mech.}]%
       \step[
         fieldsource=journal,
-        match={European Journal of Mechanics, Fluids},
-        replace={Eur. J. Mech. B Fluids}]%
+        match={Nature Communications},
+        replace={Nat. Comm.}]%
       \step[
         fieldsource=journal,
         match={Fluid Dynamics Research},
@@ -94,52 +109,58 @@
         replace={J. Comput. Phys.}]%
       \step[
         fieldsource=journal,
-        match={Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences},
-        replace={Proc. R. Soc. A}]%
+        match={Computer Physics Communications},
+        replace={Comput. Phys. Commun.}]%
+      \step[
+        fieldsource=journal,
+        match={Proceedings of the National Academy of Sciences},
+        replace={Proc. Natl. Acad. Sci. USA}]%
+      \step[
+        fieldsource=journal,
+        match={New Journal of Physics},
+        replace={New J. Phys.}]%
+      \step[
+        fieldsource=journal,
+        match={Theoretical and Applied Mechanics Letters},
+        replace={Theor. App. Mech. Lett.}]%
       \step[
         fieldsource=journal,
         match={Physics of Fluids},
         replace={Phys. Fluids}]%
       \step[
         fieldsource=journal,
-        match={Computer Physics Communications},
-        replace={Comput. Phys. Commun.}]%
-      \step[
-        fieldsource=journal,
-        match={Flow, Turbulence and Combustion},
-        replace={Flow Turbul. Combust.}]%
-      \step[
-        fieldsource=journal,
-        match={International Journal of Heat and Fluid Flow},
-        replace={Int. J Heat Fluid Fl.}]%
-      \step[
-        fieldsource=journal,
-        match={Physics Letters A},
-        replace={Phys. Lett. A}]%
-      \step[
-        fieldsource=journal,
-        match={Theoretical and Computational Fluid Dynamics},
-        replace={Theor. Comp. Fluid Dyn.}]%
-      \step[
-        fieldsource=journal,
-        match={Progress of Theoretical Physics Supplement},
-        replace={Prog. Theor. Phys. Supp.}]%
-      \step[
-        fieldsource=journal,
-        match={Akademiia Nauk SSSR Doklady},
-        replace={Dokl. Akad. Nauk SSSR}]%
-      \step[
-        fieldsource=journal,
         match={Journal of Statistical Physics},
         replace={J. Stat. Phys.}]%
-      % \step[fieldset=language, null]  % 言語を表示しない
-      \step[fieldset=doi, null]  % doiを表示しない
+      \step[
+        fieldsource=journal,
+        match={Journal of Turbulence},
+        replace={J. Turbul.}]%
+      \step[
+        fieldsource=journal,
+        match={Physics Reports},
+        replace={Phys. Rep.}]%
+      \step[
+        fieldsource=journal,
+        match={European Physical Letters},
+        replace={EPL}]%
+      \step[
+        fieldsource=journal,
+        match={Journal of the Atmospheric Sciences},
+        replace={J. Atmos. Sci.}]%
+      \step[
+        fieldsource=journal,
+        match={Scientific Reports},
+        replace={Sci. Rep.}]%
+      \step[
+        fieldsource=journal,
+        match={Physica D: Nonlinear Phenomena},
+        replace={Physica D}]%
     }
   }
 }
 %
 % ===========================================
-% itemizeの行間調整
+% itemize/enumerateの行間調整
 % ===========================================
 %
 \let\oldenumerate\enumerate
@@ -166,36 +187,27 @@
 \usepackage{pxjahyper}  % しおりの文字化けを防止
 %
 % ===========================================
-% 図，表，目次の設定
+% biblatexのlangidによる日本語文献の識別子を定義
+% cf. biblatex で日本語文献をサポート https://gist.github.com/idiotWu/4879a88a3e34618cc8215a43ba2e9fbd
 % ===========================================
-\renewcommand{\figurename}{図}
-\renewcommand{\tablename}{表}
-\renewcommand{\contentsname}{目次}
-%
-% ===========================================
-% biblatexのphysスタイルにおける日本語著者の識別子定義
-% ===========================================
-\newbibmacro*{finalnamedelim:{japanese}}{%
-  \ifnumgreater{\value{liststop}}{2}{\finalandcomma}{}%
-  \addspace\multinamedelim
-}
-
-\renewcommand*{\finalnamedelim}{%
-  \iflistundef{language}
-  {\ifnumgreater{\value{liststop}}{2}{}{}%
-  \addspace\bibstring{and}\space}
-  {\usebibmacro*{finalnamedelim:\strlist{language}}}
-}
-
-\newbibmacro*{name:given-family:{japanese}}[4]{%
-  \usebibmacro{name:delim}{#1#2}\usebibmacro{name:hook}{#1#2}#1\bibnamedelimc#2}
-
-\DeclareNameFormat{given-family}{%
-  \iflistundef{language}{%
-    \ifgiveninits
-      {\usebibmacro{name:given-family}{\namepartfamily}{\namepartgiveni}{\namepartprefix}{\namepartsuffix}}
-      {\usebibmacro{name:given-family}{\namepartfamily}{\namepartgiven}{\namepartprefix}{\namepartsuffix}}
-  }
-  {\usebibmacro*{name:given-family:\strlist{language}}{\namepartfamily}{\namepartgiven}{\namepartprefix}{\namepartsuffix}}
-  \usebibmacro{name:andothers}
+\AtEveryBibitem{
+  % langid={Japanese} で識別
+  \iffieldequalstr{langid}{Japanese} {
+    % コンマで区切り
+    \DeclareDelimFormat{finalnamedelim}{%
+      \ifnumgreater{\value{liststop}}{2}{\finalandcomma}{}%
+      \addspace\multinamedelim
+    }
+    % 名前を「姓 名」の順に
+    \DeclareNameFormat{default}{%
+      \usebibmacro{name:delim}{\namepartfamily\namepartgiven}%
+      \usebibmacro{name:hook}{\namepartfamily\namepartgiven}%
+      \namepartfamily\bibnamedelimc\namepartgiven%
+      \usebibmacro{name:andothers}
+    }
+    % URLの参照日付を年/月/日で表示
+    \DeclareFieldFormat{urldate}{%
+      （\thefield{urlyear}/\thefield{urlmonth}/\thefield{urlday}~に参照\isdot）
+    }
+  }{}
 }
