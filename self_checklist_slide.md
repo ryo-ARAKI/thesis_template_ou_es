@@ -52,6 +52,11 @@
 
 ## 図表
 
+- [ ] ラベルは聴衆が判別できる大きさにする．
+  - 自分のPCでみて「大きすぎるかな？」と思うくらいでよい．
+- [ ] パラメータ依存性などを矢印や枠線で示し，注目すべき箇所をハイライトする．
+- [ ] [self_checklist.md:図表](https://github.com/ryo-ARAKI/thesis_template_ou_es/blob/master/self_checklist.md#%E5%9B%B3%E8%A1%A8)も参照する．
+
 ## 数式
 
 ## 参考文献
