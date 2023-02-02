@@ -5,3 +5,19 @@
 このリストを有効活用して分かりやすいスライドを作ってください．
 同級生や先輩，後輩にチェックしてもらうのもよいと思います．
 また，卒論/修論用の[self_checklist.md](https://github.com/ryo-ARAKI/thesis_template_ou_es/blob/master/self_checklist.md)の内容も参考にしてください．
+
+## 全体
+
+## イントロダクション
+
+## 手法
+
+## 結果
+
+## 図表
+
+## 数式
+
+## 参考文献
+
+## 参考資料
