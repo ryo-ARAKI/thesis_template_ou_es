@@ -14,17 +14,6 @@
   - 例：スライド1枚につき理解してほしい図を1つ載せる．
   - スライド枚数は（基本的に）1分/1枚だが，試問や公聴会は時間が短いのでより多くなってもよい．ただし，その分スライドの構成にはじゅうぶん注意する
 
-### おすすめのフォントとカラーテーマ
-
-- おすすめのフォント
-  - 吉井くん：Macならヒラギノ角ゴシック（日本語）＋Helvetica（英語）
-  - 吉井くん：Windowsならメイリオ（日本語）＋SegoeUI（英語）
-- [TBA] おすすめのフォントサイズ
-  - タイトル/本文/図表のキャプション
-- [TBA] おすすめのカラーテーマ
-  - Beamerなら[Beamer theme gallery](https://deic.uab.cat/~iblanes/beamer_gallery/)から好きなものを選べばよい．
-  - 他にも，例えば[The Ultimate Beamer Theme List](https://github.com/martinbjeldbak/ultimate-beamer-theme-list)や[LaTeX Beamerの"Beamerらしく"ないおすすめテーマ集](https://qiita.com/hiterm/items/70cbb488e7a87cd9e228)にいろいろ載っている．
-
 ## 全体
 
 - [ ] スライドのアスペクト比を適切に決める．
@@ -48,6 +37,17 @@
   - Mac/iOSなら[Sim Daltonism](https://michelf.ca/projects/sim-daltonism/)というアプリで見え方を確認できる．
 - [ ] 各スライドにその内容を要約したタイトルをつける．
   - 「手法」や「結果」のようなタイトルが何枚も続くようならより詳細な（各スライドにあった）タイトルをつける．
+
+### おすすめのフォントとカラーテーマ
+
+- おすすめのフォント
+  - 吉井くん：Macならヒラギノ角ゴシック（日本語）＋Helvetica（英語）
+  - 吉井くん：Windowsならメイリオ（日本語）＋SegoeUI（英語）
+- [TBA] おすすめのフォントサイズ
+  - タイトル/本文/図表のキャプション
+- [TBA] おすすめのカラーテーマ
+  - Beamerなら[Beamer theme gallery](https://deic.uab.cat/~iblanes/beamer_gallery/)から好きなものを選べばよい．
+  - 他にも，例えば[The Ultimate Beamer Theme List](https://github.com/martinbjeldbak/ultimate-beamer-theme-list)や[LaTeX Beamerの"Beamerらしく"ないおすすめテーマ集](https://qiita.com/hiterm/items/70cbb488e7a87cd9e228)にいろいろ載っている．
 
 ## 表紙
 
