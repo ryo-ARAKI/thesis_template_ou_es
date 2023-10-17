@@ -137,7 +137,7 @@
   - 設定方法は[README：雑誌名の短縮形の管理](https://github.com/ryo-ARAKI/thesis_template_ou_es#mystylesty-%E9%9B%91%E8%AA%8C%E5%90%8D%E3%81%AE%E7%9F%AD%E7%B8%AE%E5%BD%A2%E3%81%AE%E7%AE%A1%E7%90%86)を参照せよ．
   - わからない場合は「雑誌名 abbreviation」で検索するとでてくる．
 - [ ] 英語の参考文献のタイトルが適切に表示されている．
-  - 教科書は各単語の頭文字を大文字にする．
+  - 教科書/博士論文は（接続詞を除く）各単語の頭文字を大文字にする．
     - 例： "A First Course in Turbulence"
   - 論文は固有名詞や人名以外の単語の頭文字を小文字にする．
     - 例： "Hierarchy of antiparallel vortex tubes in spatially periodic turbulence at high Reynolds numbers"

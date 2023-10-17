@@ -182,6 +182,36 @@ git push origin HEAD
 日本語文献の定義は， `.bib` ファイルで `langid={Japanese}` というフィールドを記述することで可能です．
 `bib_textbooks.bib` にいくつか日本語の文献を定義しているので参考にしてください．
 
+### タイトルの大文字/小文字の使い分けに注意
+
+英語文献のタイトルについて， `self_checklist.md` にも記載したように
+
+- 教科書/博士論文は（接続詞を除く）各単語の頭文字を大文字にする．
+  - 例： "A First Course in Turbulence"
+- 論文は固有名詞や人名以外の単語の頭文字を小文字にする．
+  - 例： "Hierarchy of antiparallel vortex tubes in spatially periodic turbulence at high Reynolds numbers"
+
+とします．
+これを達成するために， `.bib` ファイル中で大文字にしたい単語を{}でくくることができます．
+上記の例だと，
+
+```latex
+@book{tennekes1972first,
+  ...
+  title={{A} {F}irst {C}ourse in {T}urbulence},
+  ...
+}
+@article{Goto2017a,
+  ...
+  title = {Hierarchy of antiparallel vortex tubes in spatially periodic turbulence at high {R}eynolds numbers},
+  ...
+}
+```
+
+のようにしておくと良いです．
+なお，Mendeleyで `.bib` をエクスポートした際，このような設定をうまく保持する方法は分かっていません．
+たとえばマニュアルで `.bib` ファイルを修正しても文献リストを更新するなどで再エクスポートすると編集履歴が上書きされてしまうので，注意してください．
+
 ----
 
 ## `latexdiff` を用いた差分管理
