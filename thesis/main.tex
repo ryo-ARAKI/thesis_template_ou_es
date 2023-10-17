@@ -61,7 +61,6 @@
 \renewcommand{\thefootnote}{\fnsymbol{footnote}}
 \usepackage{lipsum}  % ダミー文章
 \usepackage{bxjalipsum}  % 日本語のダミー文章
-
 \usepackage{csquotes} % 'babel/polyglossia' detected but 'csquotes' missing.のWarningの回避
 %%% Font shape `JY2/hmc/b/n' undefinedなどのVS CodeのWarningの回避
 \DeclareFontShape{JY2}{hmc}{b}{n}{<->ssub*hmc/bx/n}{}
@@ -70,6 +69,14 @@
 \DeclareFontShape{JT2}{hmc}{m}{it}{<->ssub*hmc/m/n}{}
 \DeclareFontShape{JY2}{hgt}{m}{it}{<->ssub*hgt/m/n}{}
 \DeclareFontShape{JT2}{hgt}{m}{it}{<->ssub*hgt/m/n}{}
+%%% Englishの場合のChapter関係の設定
+\ifthenelse{\equal{\lang}{J}}{}{
+  \usepackage{tocloft}
+  \setlength{\cftchapnumwidth}{24truemm} % 目次のChapterのインデント
+  \renewcommand{\cftchapafterpnum}{\vskip 5pt} % Chapter後のスペース
+  \renewcommand{\prechaptername}{Chapter~} % デフォルトは第
+  \renewcommand{\postchaptername}{} % デフォルトは章
+}
 %
 % ===========================================
 % 表紙の記述
@@ -97,7 +104,7 @@
 % ===========================================
 % 目次
 % ===========================================
-\renewcommand{\contentsname}{目次}
+\renewcommand{\contentsname}{\tocname}
 \tableofcontents
 \clearpage
 
@@ -110,10 +117,10 @@
 % ===========================================
 % 以降は日本語環境
 % ===========================================
-\renewcommand{\figurename}{図}
-\renewcommand{\tablename}{表}
-\renewcommand{\prechaptername}{第}
-\renewcommand{\postchaptername}{章}
+\ifthenelse{\equal{\lang}{J}}{
+  \renewcommand{\figurename}{図} % デフォルトはFigure
+  \renewcommand{\tablename}{表} % デフォルトはTable
+}{}
 
 \pagenumbering{arabic}  % 以降算用数字でページ番号を記述
 % ===========================================
@@ -151,8 +158,8 @@
 % ===========================================
 % 参考文献
 % ===========================================
-\printbibliography[title=参考文献]
-\addcontentsline{toc}{chapter}{参考文献}
+\printbibliography[title=\reftitle]
+\addcontentsline{toc}{chapter}{\reftitle}
 \clearpage
 
 % ===========================================

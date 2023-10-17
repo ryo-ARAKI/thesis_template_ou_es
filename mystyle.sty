@@ -4,6 +4,25 @@
 % +++++++++++++++++++++++++++++++++++++++++++
 %
 % ===========================================
+% 言語の設定　日本語　English
+% ===========================================
+\newcommand*{\lang}{J} % 言語設定　J: Japanese, E: English
+\usepackage{ifthen}
+\ifthenelse{\equal{\lang}{J}}{
+  \newcommand*{\tocname}{目次}
+  \newcommand*{\tosname}{記号表}
+  \newcommand*{\reftitle}{参考文献}
+  \newcommand*{\appendixtitle}{付録}
+  \newcommand*{\acknowledgement}{謝辞}
+}{
+  \newcommand*{\tocname}{Table of Contents}
+  \newcommand*{\tosname}{Table of Symbols}
+  \newcommand*{\reftitle}{References}
+  \newcommand*{\appendixtitle}{Appendix}
+  \newcommand*{\acknowledgement}{Acknowledgements}
+}
+%
+% ===========================================
 % フォント設定
 % ===========================================
 \usepackage{hyperref}  % 図・表・参考文献へのリンク
